@@ -71,6 +71,8 @@ img {
 }
 
 .attribution {
+  position: absolute;
+  bottom: 3rem;
   font-size: 11px;
   text-align: center;
 }
