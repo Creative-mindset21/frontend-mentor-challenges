@@ -80,6 +80,8 @@ img {
   border-radius: 20px;
   inline-size: 100%;
   margin-inline: 3rem;
+  border: 1px solid var(--color-gray-950);
+  box-shadow: 8px 8px #000;
 }
 
 .texts {
