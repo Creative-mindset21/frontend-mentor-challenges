@@ -1,0 +1,134 @@
+/* CUSTOM FONTS */
+@font-face {
+  src: url("../assets/fonts/Figtree-VariableFont_wght.ttf");
+  font-family: "Figtree";
+}
+
+@font-face {
+  src: url("../assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  font-family: "Figtree";
+  font-style: italic;
+}
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --bg-color: #f4d04e;
+  --color-gray-950: #111111;
+  --color-gray-500: #6b6b6b;
+  --color-white: #fff;
+
+  /* FONT SIZES */
+  --fs-1: 1.5rem;
+  --fs-2: 1rem;
+  --fs-3: 0.875rem;
+
+  /* TRANSITIONS */
+  --transition: all 0.3s ease;
+}
+
+/* GENERAL STYLING */
+
+body {
+  background: var(--bg-color);
+  inline-size: 100%;
+  min-block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Figtree";
+  color: var(--color-gray-950);
+}
+
+.title {
+  font-size: var(--fs-1);
+  font-weight: 800;
+  line-height: 150%;
+  transition: var(--transition);
+  cursor: pointer;
+  color: inherit;
+}
+
+:is(.title:focus, .title:hover) {
+  color: var(--bg-color);
+}
+
+img {
+  object-fit: cover;
+  border-radius: 10px;
+  display: inline-block;
+  inline-size: 100%;
+}
+
+.container {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-inline-size: 384px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  inline-size: 100%;
+  margin-inline: 3rem;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.texts .learn,
+.texts .publish {
+  font-size: var(--fs-3);
+  line-height: 150%;
+}
+
+.texts .learn {
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-color);
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.texts .desc {
+  color: var(--color-gray-500);
+  font-size: var(--fs-2);
+  line-height: 150%;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author img {
+  inline-size: 2rem;
+  block-size: 2rem;
+}
+
+.author p {
+  font-weight: 800;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
