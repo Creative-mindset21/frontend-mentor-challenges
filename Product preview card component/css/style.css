@@ -145,6 +145,16 @@ img {
   background: var(--color-green-700);
 }
 
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media screen and (min-width: 768px) {
   .container {
     flex-direction: row;
