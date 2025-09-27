@@ -1,0 +1,123 @@
+/* CUSTOM FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-black: #1c232b;
+  --color-grey: #6c7289;
+  --color-cream: #f2eae2;
+  --color-white: #fff;
+  --color-green-500: #3d8168;
+  --color-green-700: #1a4032;
+
+  /* Font Size */
+  --fs-1: 2rem;
+  --fs-2: 0.875rem;
+  --fs-3: 0.75rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 100vh;
+  width: 100%;
+  background: var(--color-cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: var(--color-black);
+}
+
+h1,
+.prices p {
+  font-family: "Fraunces", serif;
+  font-size: var(--fs-1);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-img {
+  max-height: 342px;
+  border-radius: 8px 8px 0 0;
+}
+
+.container {
+  inline-size: 100%;
+  max-inline-size: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--color-white);
+  border-radius: 8px;
+  margin-inline: 1rem;
+}
+
+.texts {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+:is(.texts .perf, .texts .desc) {
+  color: var(--color-grey);
+}
+
+.texts .perf {
+  font-size: var(--fs-3);
+  line-height: 120%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.texts .desc {
+  font-size: var(--fs-2);
+  line-height: 160%;
+  font-weight: 500;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices p {
+  font-weight: 700;
+  color: var(--color-green-500);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prices span {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-grey);
+  font-size: 1.08rem;
+  font-weight: normal;
+  text-decoration: line-through;
+  line-height: 120%;
+}
+
+.icon {
+  inline-size: 15.75px;
+  block-size: 15.75px;
+}
+
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  background: var(--color-green-500);
+  color: var(--color-white);
+  font: inherit;
+  border-radius: 8px;
+  font-weight: 600;
+}
