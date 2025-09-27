@@ -136,6 +136,13 @@ img {
   font: inherit;
   border-radius: 8px;
   font-weight: 600;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.cart-btn:hover,
+.cart-btn:focus-within {
+  background: var(--color-green-700);
 }
 
 @media screen and (min-width: 768px) {
