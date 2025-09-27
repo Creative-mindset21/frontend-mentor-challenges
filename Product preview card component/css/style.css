@@ -1,6 +1,15 @@
 /* CUSTOM FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* CUSTOM CSS VARIABLES */
 :root {
   /* Colors */
@@ -25,6 +34,7 @@ body {
   width: 100%;
   background: var(--color-cream);
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -43,16 +53,22 @@ img {
   object-fit: cover;
 }
 
+.container,
+.texts,
+.prices {
+  display: flex;
+  flex-direction: column;
+}
+
 .product-img {
-  max-height: 342px;
+  max-block-size: 342px;
   border-radius: 8px 8px 0 0;
 }
 
 .container {
   inline-size: 100%;
   max-inline-size: 350px;
-  display: flex;
-  flex-direction: column;
+  block-size: 100%;
   gap: 2rem;
   background: var(--color-white);
   border-radius: 8px;
@@ -62,6 +78,7 @@ img {
 .texts {
   padding: 2rem;
   padding-top: 0;
+  gap: 1.5rem;
 }
 
 :is(.texts .perf, .texts .desc) {
@@ -82,8 +99,7 @@ img {
 }
 
 .prices {
-  display: flex;
-  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .prices p {
@@ -120,4 +136,22 @@ img {
   font: inherit;
   border-radius: 8px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-inline-size: 600px;
+  }
+
+  .product-img {
+    max-block-size: 100%;
+    max-inline-size: 300px;
+    border-radius: 0;
+  }
+
+  .texts {
+    padding: 2rem;
+    padding-left: 0;
+  }
 }
