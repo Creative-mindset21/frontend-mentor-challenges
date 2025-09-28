@@ -39,6 +39,7 @@ body {
   min-block-size: 100vh;
   background: #f6f5f6;
   font-family: "Barlow Semi Condensed", sans-serif;
+  position: relative;
 }
 
 h1 {
@@ -178,6 +179,17 @@ img {
   color: var(--color-grey-400);
 }
 
+/* ATTRIBUTION */
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 /* TABLET LAYOUT */
 @media screen and (min-width: 768px) {
   .container {
@@ -242,5 +254,15 @@ img {
   .card:last-child {
     grid-column: 4;
     grid-row: 1 / span 2;
+  }
+
+  .attribution {
+    bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .attribution {
+    bottom: 3rem;
   }
 }
