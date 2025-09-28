@@ -1,0 +1,179 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-black: #121212;
+  --color-dark-blue: #19202d;
+  --color-white: #fff;
+  --color-grey-100: #e7eaee;
+  --color-grey-200: #cfcfcf;
+  --color-grey-400: #676d7e;
+  --color-grey-500: #48556a;
+  --color-purple-50: #ede4ff;
+  --color-purple-300: #a775f1;
+  --color-purple-500: #733fc8;
+
+  /* Typography */
+  --fs-1: 1.25rem;
+  --fs-2: 0.81rem;
+  --fs-3: 0.69rem;
+}
+
+/* GENERAL CSS STYLING */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  min-block-size: 100vh;
+  background: #f6f5f6;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+h1 {
+  font-size: var(--fs-1);
+  line-height: 120%;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  inline-size: 100%;
+  max-inline-size: 305px;
+  margin: 4.56rem 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CARDS STYLING */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+}
+
+.card .profile {
+  display: flex;
+  align-items: center;
+  gap: 1.06rem;
+}
+
+.card .testimonial {
+  font-size: var(--fs-2);
+  line-height: 140%;
+}
+
+.profile img {
+  border-radius: 100vmax;
+  border: 2px solid var(--color-purple-300);
+  width: 28px;
+  height: 28px;
+}
+
+.details {
+  gap: 4px;
+}
+
+.details .name {
+  font-size: var(--fs-2);
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.details .title {
+  font-size: var(--fs-3);
+  line-height: 110%;
+  font-weight: 500;
+}
+
+/* EACH CARD STYLING */
+
+/* First Card */
+.card:first-child {
+  background: var(--color-purple-500);
+  color: var(--color-white);
+}
+
+.card:first-child .title,
+.card:first-child .testimonial {
+  color: var(--color-purple-50);
+}
+
+/* Second Card */
+.card:nth-child(2) {
+  background: var(--color-grey-500);
+  color: var(--color-white);
+}
+
+.card:nth-child(2) .title {
+  color: var(--color-grey-200);
+}
+
+.card:nth-child(2) .testimonial {
+  color: var(--color-grey-100);
+}
+
+/* Third Card */
+.card:nth-child(3) {
+  background: var(--color-white);
+  color: var(--color-grey-500);
+}
+
+.card:nth-child(3) .title,
+.card:nth-child(3) .testimonial {
+  color: var(--color-grey-400);
+}
+
+/* Fourth Card */
+.card:nth-child(4) {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+.card:nth-child(4) h1 {
+  color: var(--color-grey-200);
+}
+
+.card:nth-child(4) .testimonial {
+  color: var(--color-grey-100);
+}
+
+/* Fifth Card */
+.card:last-child {
+  background: var(--color-white);
+  color: var(--color-grey-500);
+}
+
+.card:last-child .title {
+  color: var(--color-grey-200);
+}
+
+.card:last-child .testimonial {
+  color: var(--color-grey-400);
+}
