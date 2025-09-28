@@ -177,3 +177,34 @@ img {
 .card:last-child .testimonial {
   color: var(--color-grey-400);
 }
+
+/* TABLET LAYOUT */
+@media screen and (min-width: 768px) {
+  .container {
+    max-inline-size: 647px;
+  }
+
+  .cards {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:first-child,
+  .card:nth-child(4),
+  .card:last-child {
+    grid-column: 1 / span 2;
+  }
+
+  .card:first-child {
+    grid-row: 1;
+  }
+
+  .card:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .card:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
