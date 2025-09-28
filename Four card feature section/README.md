@@ -44,5 +44,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://codeisaac.com/)
+- Website - [Creative Mindset](https://codeisaac.com/)
 - Frontend Mentor - [@Creative-mindset21](https://www.frontendmentor.io/profile/Creative-mindset21)
