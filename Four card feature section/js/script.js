@@ -30,19 +30,19 @@ const cardsItems = [
   },
 ];
 
-// let htmlEL = "";
+let htmlEL = "";
 
-// cardsItems.map(({ title, para, src, color }) => {
-//   htmlEL += `
-//     <div class="card" style="border-top: 4px solid ${color}">
-//         <div class="texts">
-//         <h3>${title}</h3>
-//         <p>${para}</p>
-//         </div>
+cardsItems.map(({ title, para, src, color }) => {
+  htmlEL += `
+    <div class="card" style="border-top: 4px solid ${color}">
+        <div class="texts">
+        <h3>${title}</h3>
+        <p>${para}</p>
+        </div>
 
-//         <img src="${src}" alt="${title} Icon" />
-//     </div>
-//     `;
-// });
+        <img src="${src}" alt="${title} Icon" />
+    </div>
+    `;
+});
 
-// cardsEl.innerHTML = htmlEL;
+cardsEl.innerHTML = htmlEL;
