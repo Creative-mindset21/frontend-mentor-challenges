@@ -1,0 +1,196 @@
+/* CUSTOM CSS FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-grey-500: #4d4f62;
+  --color-grey-400: #6a7178;
+  --color-white: #fff;
+  --color-red: #ea5454;
+  --color-cyan: #44d3d2;
+  --color-blue: #549ef2;
+  --color-orange: #fcae4a;
+  --color-bg: #fafafa;
+
+  /* Font Size */
+  --fs-1: 1.7rem;
+  --fs-2: 1.25rem;
+  --fs-3: 0.94rem;
+  --fs-4: 0.81rem;
+}
+
+/* GENERAL CSS STYLING */
+body {
+  inline-size: 100%;
+  min-block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-bg);
+  color: var(--color-grey-500);
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+.desc {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: var(--fs-1);
+  letter-spacing: 0.25px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 3.5rem 2rem;
+}
+
+.heading {
+  gap: 1rem;
+}
+
+.desc {
+  font-size: var(--fs-3);
+}
+
+.powered {
+  font-weight: 300;
+}
+
+.cards {
+  margin-top: 3.75rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: var(--color-white);
+  padding: 2rem;
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card h3 {
+  font-size: var(--fs-2);
+  line-height: 135%;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card p {
+  margin-bottom: 2rem;
+  line-height: 160%;
+  font-size: var(--fs-4);
+}
+
+.card img {
+  margin-left: auto;
+}
+
+/* ATTRIBUTION */
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* TABLET DESIGN */
+@media screen and (min-width: 768px) {
+  :root {
+    --fs-1: 2.25rem;
+  }
+
+  .desc {
+    max-inline-size: 540px;
+    margin-inline: auto;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .card {
+    max-inline-size: 314px;
+  }
+
+  .card:first-child {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card:nth-child(2) {
+    grid-column: 1 / span 2;
+  }
+
+  .card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .card:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+/* LAPTOP DESIGN */
+@media screen and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+  }
+
+  .card:first-child,
+  .card:last-child {
+    grid-row: 1 / span 2;
+  }
+
+  .card:nth-child(2) {
+    grid-column: 2;
+  }
+
+  .card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .card:last-child {
+    grid-column: 3;
+  }
+}
