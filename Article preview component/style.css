@@ -1,0 +1,162 @@
+/* CUSTOM CSS FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-grey-900: #48556a;
+  --color-grey-500: #6e8098;
+  --color-grey-400: #9daec2;
+  --color-grey-200: #ecf2f8;
+  --color-white: #fff;
+
+  /* Font Size */
+  --fs-1: 1.25rem;
+  --fs-2: 0.8125rem;
+}
+
+/* GENERAL STYLING */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  min-block-size: 100vh;
+  font-family: "Manrope", sans-serif;
+  background: var(--color-grey-200);
+}
+
+h1 {
+  font-size: var(--fs-1);
+  line-height: 130%;
+  letter-spacing: 0.25px;
+  margin-bottom: 1.5rem;
+  color: var(--color-grey-900);
+}
+
+img {
+  inline-size: 100%;
+  object-fit: cover;
+  display: block;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* CONTAINER STYLING */
+
+.container {
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 40px 40px -10px rgba(201, 213, 225, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-inline: 2rem;
+}
+
+.drawer-img {
+  border-radius: 10px 10px 0 0;
+}
+
+.contents {
+  padding-inline: 1.875rem;
+}
+
+.desc,
+.name,
+.date {
+  font-size: var(--fs-2);
+  line-height: 140%;
+  letter-spacing: 0.12px;
+}
+
+.desc {
+  color: var(--color-grey-500);
+}
+
+/* AUTHOR STYLING */
+
+.author {
+  padding: 3rem 0 1.125rem;
+  justify-content: space-between;
+}
+
+.author > div {
+  gap: 1rem;
+}
+
+.michelle-img {
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: 100vmax;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: var(--color-grey-900);
+  font-weight: 700;
+}
+
+.date {
+  color: var(--color-grey-400);
+}
+
+.btn {
+  inline-size: 2rem;
+  block-size: 2rem;
+  display: grid;
+  place-content: center;
+  border-radius: 100vmax;
+  border: none;
+  color: var(--color-grey-200);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-inline-size: 38rem;
+    gap: 0;
+  }
+
+  .drawer-img {
+    border-radius: 0;
+    inline-size: 50%;
+  }
+
+  .contents {
+    padding: 2.5625rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-inline-size: 45.625rem;
+    margin-inline: 0;
+  }
+
+  .drawer-img {
+    inline-size: 38%;
+  }
+
+  .contents {
+    padding: 2.5625rem 2.5rem;
+  }
+}
