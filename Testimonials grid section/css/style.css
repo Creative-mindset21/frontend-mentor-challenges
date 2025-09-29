@@ -76,7 +76,7 @@ img {
   gap: 1rem;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.65);
 }
 
 .card .profile {
@@ -117,8 +117,11 @@ img {
 
 /* First Card */
 .card:first-child {
-  background: var(--color-purple-500);
+  background: url("../images/bg-pattern-quotation.svg") no-repeat,
+    var(--color-purple-500);
+  background-position: -100%;
   color: var(--color-white);
+  background-blend-mode: overlay;
 }
 
 .card:first-child .title,
@@ -209,6 +212,7 @@ img {
 
   .card:first-child {
     grid-row: 1;
+    background-position: 60% 5%;
   }
 
   .card:nth-child(2) {
@@ -234,6 +238,7 @@ img {
   .card:first-child {
     grid-row: 1;
     grid-column: 1 / span 2;
+    background-position: 85% 5%;
   }
 
   .card:nth-child(2) {
