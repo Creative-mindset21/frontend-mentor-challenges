@@ -13,7 +13,7 @@
 /* CUSTOM CSS VARIABLES */
 :root {
   /* Colors */
-  --color-cyan-600: #4d96a9;
+  --color-cyan-600: rgb(77, 150, 169);
   --color-cyan-300: #8fe3f9;
   --color-purple-600: #855fb1;
   --color-purple-300: #d9b8ff;
@@ -140,7 +140,7 @@ header {
 /* ABOUT SECTION */
 
 .about {
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
   gap: 4rem;
 }
 
@@ -197,6 +197,36 @@ header {
   line-height: 110%;
 }
 
+/* EXPERIENCE */
+
+.experience {
+  background: linear-gradient(
+      rgba(77, 150, 169, 0.85),
+      rgba(77, 150, 169, 0.85)
+    ),
+    url("../assets/mobile/image-footer.jpg") top/cover no-repeat;
+  color: var(--color-white);
+  position: relative;
+  margin-top: 6rem;
+}
+
+.e-wrapper {
+  padding: 4rem 2rem;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.experience .number2 {
+  position: absolute;
+  bottom: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.e-wrapper span {
+  color: var(--color-purple-300);
+}
+
 @media screen and (min-width: 768px) {
   :root {
     --fs-1: 3rem;
@@ -227,8 +257,20 @@ header {
     font-weight: 900;
   }
 
-  .a-texts p {
+  .a-texts p,
+  .experience p {
     max-inline-size: 504px;
     margin-inline: auto;
+  }
+
+  .experience {
+    background: linear-gradient(
+        rgba(77, 150, 169, 0.85),
+        rgba(77, 150, 169, 0.85)
+      ),
+      url("../assets/tablet/image-footer.jpg") top/cover no-repeat;
+    color: var(--color-white);
+    position: relative;
+    margin-top: 6rem;
   }
 }
