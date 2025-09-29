@@ -99,6 +99,11 @@ header {
   gap: 3rem;
 }
 
+.hero-left,
+.hero-right {
+  display: none;
+}
+
 .hero .texts {
   padding-inline: 2rem;
   gap: 1.5rem;
@@ -248,6 +253,7 @@ header {
   .about {
     padding: 3.5rem;
   }
+
   .images {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -269,8 +275,60 @@ header {
         rgba(77, 150, 169, 0.85)
       ),
       url("../assets/tablet/image-footer.jpg") top/cover no-repeat;
-    color: var(--color-white);
-    position: relative;
-    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --fs-1: 4rem;
+    --fs-2: 2.5rem;
+    --fs-3: 1.125rem;
+    --fs-4: 1rem;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero-left,
+  .hero-right {
+    display: inline-block;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 0;
+  }
+
+  .images {
+    max-inline-size: 1220px;
+    margin-inline: auto;
+  }
+
+  .experience {
+    background: linear-gradient(
+        rgba(77, 150, 169, 0.85),
+        rgba(77, 150, 169, 0.85)
+      ),
+      url("../assets/desktop/image-footer.jpg") top/cover no-repeat;
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  .experience h2 {
+    max-inline-size: 445px;
+  }
+
+  .e-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .experience {
+    padding: 0 15rem;
   }
 }
