@@ -4,6 +4,7 @@ const subscribeEl = document.getElementById("subscribe-el");
 const subscribedEl = document.getElementById("subscribed-el");
 const dismissBtn = document.getElementById("dismiss-btn");
 const errorMsg = document.getElementById("error-msg");
+const subscribedEmail = document.getElementById("subscribed-email");
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,6 +16,7 @@ formEl.addEventListener("submit", (e) => {
     emailEl.value = "";
     subscribeEl.classList.add("subscribe");
     subscribedEl.style.display = "grid";
+    subscribedEmail.textContent = `${data.email}.`;
   } else {
     errorMsg.style.display = "inline-block";
     emailEl.classList.add("error-input");
