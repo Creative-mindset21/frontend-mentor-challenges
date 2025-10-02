@@ -45,6 +45,7 @@ body {
   min-block-size: 100vh;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
 main {
@@ -227,6 +228,10 @@ li::before {
   border: 1px solid var(--color-red);
 }
 
+.attribution {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   :root {
     /* Font Size */
@@ -302,5 +307,20 @@ li::before {
 
   .btn:hover::before {
     opacity: 1;
+  }
+
+  /* FOOTER */
+  .attribution {
+    display: inline-block;
+    position: absolute;
+    bottom: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-white);
+  }
+  .attribution a {
+    color: var(--color-red);
   }
 }
