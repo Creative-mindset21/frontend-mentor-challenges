@@ -115,6 +115,12 @@ h1 {
   color: var(--color-purple-500);
   font-size: var(--fs-5);
   line-height: 21px;
+  transition: all 0.5s ease;
+}
+
+.calendar li a:hover,
+.calendar li a:focus-within {
+  color: var(--color-white);
 }
 
 /* CARDS STYLING */
