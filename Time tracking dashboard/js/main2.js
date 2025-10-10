@@ -2,7 +2,7 @@ const cardsEl = document.getElementById("cards");
 const calendarLinks = document.querySelectorAll("#calendar a");
 
 let activityData = [];
-let selectedTimeframe = "weekly";
+let selectedTimeframe = "daily";
 
 let svgImages = [
   "./images/icon-work.svg",
@@ -36,10 +36,16 @@ function renderData(data, timeframe) {
     const current = dat.timeframes[timeframe].current;
     const previous = dat.timeframes[timeframe].previous;
 
+    console.log(typeof current);
+
     let previousTime = "";
 
     if (selectedTimeframe === "daily") {
-      previousTime = `Yesterday - ${previous}hrs`;
+      if (previous <= 1) {
+        previousTime = `Yesterday - ${previous}hr`;
+      } else {
+        previousTime = `Yesterday - ${previous}hrs`;
+      }
     } else if (selectedTimeframe === "weekly") {
       previousTime = `Last week - ${previous}hrs`;
     } else {
