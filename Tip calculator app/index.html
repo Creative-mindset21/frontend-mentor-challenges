@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="Tip Calculator App" />
+
+    <!-- FAVICON LINKING -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- CUSTOM CSS LINKING -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="Splitter Logo" />
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="input">
+          <div class="section">
+            <h2>Bill</h2>
+
+            <div class="amount-div">
+              <label for="bill">Bill</label>
+              <img
+                src="./images/icon-dollar.svg"
+                alt="Dollar Symbol"
+                class="input-svg"
+              />
+              <input
+                type="number"
+                name="bill"
+                id="bill"
+                class="bill-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <div class="section" id="section">
+            <h2>Select Tip %</h2>
+
+            <div class="btns">
+              <button data-amount="5" class="btn">5%</button>
+              <button data-amount="10" class="btn">10%</button>
+              <button data-amount="15" class="btn">15%</button>
+              <button data-amount="25" class="btn">25%</button>
+              <button data-amount="50" class="btn">50%</button>
+              <button class="btn">Custom</button>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Number of People</h2>
+
+            <div class="amount-div">
+              <label for="people">People</label>
+              <img
+                src="./images/icon-person.svg"
+                alt="Person svg"
+                class="input-svg"
+              />
+              <input type="number" name="people" id="people" placeholder="0" />
+            </div>
+          </div>
+        </section>
+
+        <section class="output flex">
+          <div class="tip-div">
+            <p class="text">Tip Amount <span>/ person</span></p>
+            <p class="tip amount" id="tip-amount">$4.27</p>
+          </div>
+
+          <div class="total-div">
+            <p class="text">Total <span>/ person</span></p>
+            <p class="total amount" id="total-amount">$32.79</p>
+          </div>
+
+          <button class="reset-btn btn" id="reset-btn">Reset</button>
+        </section>
+
+        <!-- <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div> -->
+      </div>
+    </main>
+  </body>
+</html>
