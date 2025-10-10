@@ -95,6 +95,22 @@ input::-webkit-outer-spin-button {
   background: var(--color-green-900);
   color: var(--color-white);
   font: inherit;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.btn:active {
+  color: var(--color-green-900);
+}
+
+.btn:hover,
+.btn:focus-visible,
+.btn:active,
+.reset-btn:not(.disabled):hover,
+.reset-btn:not(.disabled):focus-within {
+  background: var(--color-green-200);
 }
 
 input,
@@ -109,7 +125,7 @@ header {
 }
 
 /* CONTAINER STYLING */
-.container {
+.container form {
   background: var(--color-white);
   inline-size: 100%;
   padding: 2rem 1.5rem;
@@ -192,14 +208,21 @@ header {
   line-height: 30px;
 }
 
+.reset-btn.disabled {
+  background: var(--color-green-750);
+  pointer-events: none;
+}
+
 @media screen and (min-width: 768px) {
   body {
     display: grid;
     place-content: center;
   }
 
-  .container {
+  .container form {
     padding: 3rem 5rem;
+    border-radius: 25px;
+    margin-bottom: 2rem;
   }
 
   .section {
@@ -217,5 +240,29 @@ header {
   .tip,
   .total {
     font-size: var(--fs-1);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container form {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem 2.5rem;
+  }
+
+  .output {
+    flex-basis: 60%;
+    position: relative;
+    padding-top: 2.34rem;
+    padding-inline: 2.5rem;
+  }
+
+  .reset-btn {
+    position: absolute;
+    bottom: 2.34rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    margin-inline: auto;
+    display: block;
   }
 }
