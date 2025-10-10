@@ -153,6 +153,22 @@ h1 {
   background: var(--color-blue-300);
 }
 
+.card:nth-child(3) .top-effect {
+  background: var(--color-pink-400);
+}
+
+.card:nth-child(4) .top-effect {
+  background: var(--color-green-400);
+}
+
+.card:nth-child(5) .top-effect {
+  background: var(--color-purple-700);
+}
+
+.card:last-child .top-effect {
+  background: var(--color-yellow-300);
+}
+
 .schedule {
   position: absolute;
   top: 0;
@@ -193,10 +209,12 @@ h1 {
   line-height: 18px;
 }
 
-.top-effect svg {
+.top-effect img {
   display: block;
   margin-left: auto;
   margin-right: 1rem;
+  inline-size: 79px;
+  block-size: 79px;
 }
 
 #calendar a.active {
