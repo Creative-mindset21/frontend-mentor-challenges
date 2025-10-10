@@ -45,7 +45,6 @@ body {
   inline-size: 100%;
   min-block-size: 100vh;
   background: var(--color-grey-200);
-
   font-family: "Space Mono", monospace;
   font-weight: 700;
   position: relative;
@@ -140,6 +139,11 @@ header {
   gap: 1rem;
 }
 
+.custom {
+  background: var(--color-grey-50);
+  color: var(--color-grey-550);
+}
+
 /* OUTPUT STYLING */
 .output {
   background: var(--color-green-900);
@@ -186,4 +190,32 @@ header {
   text-transform: uppercase;
   font-size: var(--fs-4);
   line-height: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+
+  .container {
+    padding: 3rem 5rem;
+  }
+
+  .section {
+    padding-block: 1.5rem;
+  }
+
+  .btns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .tip,
+  .total {
+    font-size: var(--fs-1);
+  }
 }
