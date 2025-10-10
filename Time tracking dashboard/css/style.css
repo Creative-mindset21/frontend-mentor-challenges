@@ -222,11 +222,6 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    display: grid;
-    place-content: center;
-  }
-
   .cards {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.5rem;
@@ -234,7 +229,8 @@ h1 {
   }
 
   .card {
-    block-size: auto;
+    block-size: 213px;
+    width: 100%;
   }
 
   .time {
@@ -250,6 +246,11 @@ h1 {
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+
   h1 {
     font-size: var(--fs-2);
     line-height: 47px;
@@ -259,7 +260,6 @@ h1 {
 
   .container {
     grid-template-columns: 1fr 4fr;
-    inline-size: 100%;
     gap: 2rem;
   }
 
