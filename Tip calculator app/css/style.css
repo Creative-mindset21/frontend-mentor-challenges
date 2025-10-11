@@ -99,12 +99,14 @@ input::-webkit-outer-spin-button {
   transition: all 0.4s ease;
 }
 
+.active,
 .btn:hover,
 .btn:focus-visible,
 .btn:active {
   color: var(--color-green-900);
 }
 
+.active,
 .btn:hover,
 .btn:focus-visible,
 .btn:active,
@@ -158,6 +160,7 @@ header {
 .custom {
   background: var(--color-grey-50);
   color: var(--color-grey-550);
+  text-align: center;
 }
 
 /* OUTPUT STYLING */
@@ -223,6 +226,7 @@ header {
     padding: 3rem 5rem;
     border-radius: 25px;
     margin-bottom: 2rem;
+    max-width: 608px;
   }
 
   .section {
@@ -248,10 +252,15 @@ header {
     flex-direction: row;
     gap: 3rem;
     padding: 2rem 2.5rem;
+    max-width: 920px; /* change this value to taste */
+  }
+
+  .input {
+    flex-basis: 60%;
   }
 
   .output {
-    flex-basis: 60%;
+    flex-basis: 45%;
     position: relative;
     padding-top: 2.34rem;
     padding-inline: 2.5rem;
