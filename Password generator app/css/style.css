@@ -58,7 +58,7 @@ header {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: var(--fs-4);
   line-height: 20px;
   margin-bottom: 1rem;
   color: var(--color-gray-600);
@@ -135,6 +135,7 @@ label {
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 /* INPUT CSS STYLING */
@@ -142,6 +143,7 @@ label {
   background: var(--color-gray-800);
   padding: 1rem;
   gap: 2rem;
+  inline-size: 100%;
 }
 
 .char-length {
@@ -155,6 +157,38 @@ label {
   font-size: var(--fs-2);
   color: var(--color-green-200);
   line-height: 32px;
+}
+
+.slider {
+  inline-size: 100%;
+  block-size: 8px;
+  background: linear-gradient(
+    to right,
+    var(--color-green-200) 0%,
+    var(--color-green-200) var(--value, 26%),
+    var(--color-gray-850) var(--value, 26%),
+    var(--color-gray-850) 100%
+  );
+  border-radius: 100vmax;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: opacity 0.2s;
+  opacity: 0.7;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  background: var(--color-green-200);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  inline-size: 25px;
+  block-size: 25px;
+  border-radius: 100vmax;
 }
 
 .checkbox-btns {
@@ -234,6 +268,11 @@ input[type="checkbox"] {
 }
 
 @media screen and (min-width: 768px) {
+  h1 {
+    font-size: var(--fs-2);
+    line-height: 32px;
+  }
+
   p,
   label {
     font-size: var(--fs-3);
