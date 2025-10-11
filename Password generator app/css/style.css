@@ -1,0 +1,272 @@
+/*! CUSTOM FONTS */
+
+@font-face {
+  src: url("../assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+  font-family: "Jet Brains Mono";
+}
+@font-face {
+  src: url("../assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
+  font-family: "Jet Brains Mono Italic";
+}
+
+/*! RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ! CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-950: #08070b;
+  --color-gray-850: #18171f;
+  --color-gray-800: #24232c;
+  --color-gray-700: #54535b;
+  --color-gray-600: #817d92;
+  --color-gray-200: #e6e5ea;
+  --color-green-200: #a4ffaf;
+  --color-yellow-300: #f8cd65;
+  --color-orange-400: #fb7c58;
+  --color-red-500: #f64a4a;
+
+  /* Font Size */
+  --fs-1: 2rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.125rem;
+  --fs-4: 1rem;
+}
+
+/* ! GENERAL CSS STYLING */
+body {
+  background: var(--color-gray-950);
+  inline-size: 100%;
+  min-block-size: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Jet Brains Mono";
+  color: var(--color-gray-200);
+  position: relative;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1rem;
+  line-height: 20px;
+  margin-bottom: 1rem;
+  color: var(--color-gray-600);
+}
+
+img {
+  object-fit: cover;
+  inline-size: 100%;
+  display: inline-block;
+}
+
+p,
+label {
+  font-size: var(--fs-4);
+  line-height: 20px;
+}
+
+/* MAIN WRAPPER */
+
+.wrapper {
+  margin-inline: 1rem;
+}
+
+.pass-label {
+  position: absolute;
+  left: -999%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-output {
+  inline-size: 100%;
+  position: relative;
+  background: var(--color-gray-800);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.pass-output .copied-txt {
+  padding-right: 3rem;
+  font-size: var(--fs-4);
+  line-height: 20px;
+  color: var(--color-green-200);
+  text-transform: uppercase;
+  display: none;
+}
+
+.pass-output .password {
+  inline-size: 100%;
+  background: transparent;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: var(--color-gray-200);
+  font-size: var(--fs-2);
+  line-height: 32px;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+.pass-output .password::placeholder {
+  color: var(--color-gray-700);
+}
+
+.copy-btn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* INPUT CSS STYLING */
+.pass-input {
+  background: var(--color-gray-800);
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.char-length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.length {
+  font-size: var(--fs-2);
+  color: var(--color-green-200);
+  line-height: 32px;
+}
+
+.checkbox-btns {
+  gap: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkbox-box {
+  inline-size: 20px;
+  block-size: 20px;
+  border: 2px solid var(--color-gray-200);
+  background: transparent;
+}
+
+.active,
+.checkbox-box:hover {
+  background: url("../assets/images/icon-check.svg") no-repeat center,
+    var(--color-green-200);
+  border: none;
+}
+
+input[type="checkbox"] {
+  background: transparent;
+}
+
+.strength,
+.boxs,
+.generate-btn {
+  display: flex;
+  align-items: center;
+}
+
+.strength {
+  background: var(--color-gray-850);
+  padding: 14px 1rem;
+  color: var(--color-gray-600);
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+
+.boxs {
+  gap: 0.5rem;
+}
+
+.box {
+  inline-size: 10px;
+  block-size: 28px;
+  border: 2px solid var(--color-gray-200);
+}
+
+.box-active,
+.box:hover {
+  background: var(--color-yellow-300);
+  border: none;
+}
+
+.generate-btn {
+  background: var(--color-green-200);
+  border: none;
+  padding-block: 1rem;
+  font: inherit;
+  text-transform: uppercase;
+  color: var(--color-gray-800);
+  font-weight: 600;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.generate-btn img {
+  inline-size: 12px;
+  block-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  p,
+  label {
+    font-size: var(--fs-3);
+    line-height: 24px;
+  }
+
+  .pass-output .password {
+    font-size: var(--fs-1);
+    line-height: 42px;
+  }
+
+  .pass-output .copied-txt {
+    padding-right: 4rem;
+    font-size: var(--fs-3);
+    line-height: 24px;
+  }
+
+  .copy-btn {
+    right: 2rem;
+  }
+
+  .strength {
+    padding: 1.5rem 2rem;
+  }
+
+  .pass-input,
+  .pass-output .password {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pass-output .copied-txt {
+    padding-right: 4.5rem;
+  }
+}

@@ -23,56 +23,88 @@
     <title>Frontend Mentor | Password generator app</title>
   </head>
   <body>
-    <header>
-      <h1>Password Generator</h1>
-    </header>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
 
-    <main>
-      <form action="" class="container">
-        <div class="pass-output">
-          <label for="password">Copy Password</label>
-          <input type="text" name="password" id="password" class="password" />
-          <button aria-label="Copy Password">
-            <img src="./assets/images/icon-copy.svg" alt="Copy SVG" />
-          </button>
-        </div>
+      <main>
+        <form action="" class="form-container">
+          <div class="pass-output">
+            <label for="password" class="pass-label">Copy Password</label>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              class="password"
+              placeholder="P4$5W0rD!"
+            />
 
-        <div class="pass-input">
-          <div class="char-length">
-            <p>Character Length</p>
-            <p class="length">0</p>
+            <p class="copied-txt">Copied</p>
+            <button
+              aria-label="Copy Password"
+              id="copy-btn"
+              class="copy-btn"
+              type="button"
+            >
+              <img src="./assets/images/icon-copy.svg" alt="Copy SVG" />
+            </button>
           </div>
 
-          <progress value="0" min="0" max="12"></progress>
+          <div class="pass-input flex">
+            <div>
+              <div class="char-length">
+                <p>Character Length</p>
+                <p class="length">0</p>
+              </div>
 
-          <input type="checkbox" name="" id="upper" />
-          <label for="upper">Include Uppercase Letters</label>
-
-          <input type="checkbox" name="" id="" />
-          <label for="upper">Include Lowercase Letters</label>
-
-          <input type="checkbox" name="" id="" />
-          <label for="upper">Include Numbers</label>
-
-          <input type="checkbox" name="" id="" />
-          <label for="upper">Include Symbols</label>
-
-          <div class="strength">
-            <p>Strength</p>
-
-            <div class="boxs">
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
+              <progress value="0" min="0" max="12"></progress>
             </div>
+
+            <div class="checkbox-btns flex">
+              <div class="checkbox">
+                <div class="checkbox-box" id="upper"></div>
+                <label for="upper">Include Uppercase Letters</label>
+              </div>
+
+              <div class="checkbox">
+                <div class="checkbox-box" id="lower"></div>
+                <label for="lower">Include Lowercase Letters</label>
+              </div>
+
+              <div class="checkbox">
+                <div class="checkbox-box" id="numbers"></div>
+                <label for="numbers">Include Numbers</label>
+              </div>
+
+              <div class="checkbox">
+                <div class="checkbox-box" id="symbols"></div>
+                <label for="symbols">Include Symbols</label>
+              </div>
+            </div>
+
+            <div class="strength">
+              <p>Strength</p>
+
+              <div class="boxs">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+            </div>
+
+            <button id="generate-btn" type="submit" class="generate-btn">
+              Generate
+              <img
+                src="./assets/images/icon-arrow-right.svg"
+                alt="Arrow Right"
+              />
+            </button>
           </div>
-
-          <button>Generate</button>
-        </div>
-      </form>
-    </main>
-
+        </form>
+      </main>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>
