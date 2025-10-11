@@ -29,7 +29,7 @@
       </header>
 
       <main>
-        <form action="" class="form-container">
+        <form action="" class="form-container" id="form">
           <div class="pass-output">
             <label for="password" class="pass-label">Copy Password</label>
             <input
@@ -71,22 +71,32 @@
 
             <div class="checkbox-btns flex">
               <div class="checkbox">
-                <div class="checkbox-box" id="upper"></div>
+                <input type="checkbox" name="check" id="upper" value="upper" />
                 <label for="upper">Include Uppercase Letters</label>
               </div>
 
               <div class="checkbox">
-                <div class="checkbox-box" id="lower"></div>
+                <input type="checkbox" name="check" id="lower" value="lower" />
                 <label for="lower">Include Lowercase Letters</label>
               </div>
 
               <div class="checkbox">
-                <div class="checkbox-box" id="numbers"></div>
+                <input
+                  type="checkbox"
+                  name="check"
+                  id="numbers"
+                  value="numbers"
+                />
                 <label for="numbers">Include Numbers</label>
               </div>
 
               <div class="checkbox">
-                <div class="checkbox-box" id="symbols"></div>
+                <input
+                  type="checkbox"
+                  name="check"
+                  id="symbols"
+                  value="symbols"
+                />
                 <label for="symbols">Include Symbols</label>
               </div>
             </div>
@@ -113,6 +123,6 @@
         </form>
       </main>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>

@@ -198,22 +198,24 @@ label {
   gap: 1rem;
 }
 
-.checkbox-box {
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
   inline-size: 20px;
   block-size: 20px;
   border: 2px solid var(--color-gray-200);
   background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  vertical-align: middle;
 }
 
 .active,
-.checkbox-box:hover {
+.checkbox input[type="checkbox"]:checked {
   background: url("../assets/images/icon-check.svg") no-repeat center,
     var(--color-green-200);
   border: none;
-}
-
-input[type="checkbox"] {
-  background: transparent;
 }
 
 .strength,
