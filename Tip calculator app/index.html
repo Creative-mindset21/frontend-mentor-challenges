@@ -29,7 +29,7 @@
 
     <main>
       <div class="container">
-        <form action="">
+        <form action="" id="form-el">
           <section class="input">
             <div class="section">
               <h2>Bill</h2>
@@ -54,7 +54,7 @@
             <div class="section" id="section">
               <h2>Select Tip %</h2>
 
-              <div class="btns">
+              <div class="btns" id="btns">
                 <button data-amount="5" class="btn" type="button">5%</button>
                 <button data-amount="10" class="btn" type="button">10%</button>
                 <button data-amount="15" class="btn" type="button">15%</button>
@@ -95,12 +95,7 @@
               <p class="total amount" id="total-amount">$32.79</p>
             </div>
 
-            <button
-              class="reset-btn btn disabled"
-              id="reset-btn"
-              type="reset"
-              disabled
-            >
+            <button class="reset-btn btn disabled" id="reset-btn" type="submit">
               Reset
             </button>
           </section>
@@ -114,5 +109,7 @@
         </div> -->
       </div>
     </main>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
