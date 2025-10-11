@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="Password Generator App" />
+
+    <!-- FAVICON LINKING -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- CSS LINKING -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+
+    <main>
+      <form action="" class="container">
+        <div class="pass-output">
+          <label for="password">Copy Password</label>
+          <input type="text" name="password" id="password" class="password" />
+          <button aria-label="Copy Password">
+            <img src="./assets/images/icon-copy.svg" alt="Copy SVG" />
+          </button>
+        </div>
+
+        <div class="pass-input">
+          <div class="char-length">
+            <p>Character Length</p>
+            <p class="length">0</p>
+          </div>
+
+          <progress value="0" min="0" max="12"></progress>
+
+          <input type="checkbox" name="" id="upper" />
+          <label for="upper">Include Uppercase Letters</label>
+
+          <input type="checkbox" name="" id="" />
+          <label for="upper">Include Lowercase Letters</label>
+
+          <input type="checkbox" name="" id="" />
+          <label for="upper">Include Numbers</label>
+
+          <input type="checkbox" name="" id="" />
+          <label for="upper">Include Symbols</label>
+
+          <div class="strength">
+            <p>Strength</p>
+
+            <div class="boxs">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+
+          <button>Generate</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
