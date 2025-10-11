@@ -162,6 +162,8 @@ label {
 .slider {
   inline-size: 100%;
   block-size: 8px;
+  -webkit-appearance: none;
+  appearance: none;
   background: linear-gradient(
     to right,
     var(--color-green-200) 0%,
@@ -169,12 +171,8 @@ label {
     var(--color-gray-850) var(--value, 26%),
     var(--color-gray-850) 100%
   );
-  border-radius: 100vmax;
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  transition: opacity 0.2s;
   opacity: 0.7;
+  transition: opacity 0.4s;
 }
 
 .slider:hover {
@@ -182,13 +180,12 @@ label {
 }
 
 .slider::-webkit-slider-thumb {
-  background: var(--color-green-200);
   appearance: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  inline-size: 25px;
-  block-size: 25px;
+  width: 28px;
+  height: 28px;
+  background: var(--color-white);
   border-radius: 100vmax;
+  cursor: pointer;
 }
 
 .checkbox-btns {
