@@ -5,6 +5,7 @@ const tipBtns = document.querySelectorAll("#btns button");
 const customEl = document.getElementById("custom");
 const tipAmount = document.getElementById("tip-amount");
 const totalAmount = document.getElementById("total-amount");
+const resetBtn = document.getElementById("reset-btn");
 
 let selectedTip = 0;
 
@@ -55,4 +56,10 @@ calculateTip();
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
   calculateTip();
+});
+
+resetBtn.addEventListener("click", () => {
+  tipAmount.textContent = `£0.00`;
+  totalAmount.textContent = `£0.00`;
+  tipBtns.forEach((b) => b.classList.remove("active"));
 });
