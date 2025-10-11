@@ -121,6 +121,7 @@ label {
   line-height: 32px;
   font-weight: inherit;
   font-family: inherit;
+  pointer-events: none;
 }
 
 .pass-output .password::placeholder {

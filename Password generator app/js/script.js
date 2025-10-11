@@ -5,12 +5,24 @@ const symbols = "!@#$%^&*()_+-=[]{}|;:,.<>?";
 
 const slider = document.getElementById("length-range");
 const formEl = document.getElementById("form");
+const passwordEl = document.getElementById("password");
+const lengthEl = document.getElementById("length");
 
 slider.addEventListener("input", (e) => {
   const value =
     ((e.target.value - e.target.min) / (e.target.max - e.target.min)) * 100;
   e.target.style.setProperty("--value", `${value}%`);
 });
+
+/* CHANGE THE CHARACTER LENGTH WHEN CHANGED */
+function changeLength() {
+  lengthEl.textContent = slider.value;
+  slider.addEventListener("input", () => {
+    lengthEl.textContent = slider.value;
+  });
+}
+
+changeLength();
 
 /* GENERATE PASSWORDS */
 formEl.addEventListener("submit", (e) => {
@@ -38,5 +50,5 @@ formEl.addEventListener("submit", (e) => {
     pass += characters[randomIndex];
   }
 
-  console.log(pass);
+  passwordEl.value = pass;
 });
