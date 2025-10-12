@@ -76,8 +76,6 @@ function checkPassword() {
     strength += 1;
   }
 
-  console.log(strength);
-
   renderColor(strength);
 }
 

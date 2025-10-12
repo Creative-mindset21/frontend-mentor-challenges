@@ -214,7 +214,6 @@ label {
   vertical-align: middle;
 }
 
-.active,
 .checkbox input[type="checkbox"]:checked {
   background: url("../assets/images/icon-check.svg") no-repeat center,
     var(--color-green-200);
@@ -246,8 +245,7 @@ label {
   border: 2px solid var(--color-gray-200);
 }
 
-.box-active,
-.box:hover {
+.box-active {
   background: var(--color-yellow-300);
   border: none;
 }
