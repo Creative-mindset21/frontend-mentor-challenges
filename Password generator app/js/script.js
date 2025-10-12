@@ -8,7 +8,6 @@ const formEl = document.getElementById("form");
 const passwordEl = document.getElementById("password");
 const lengthEl = document.getElementById("length");
 
-lengthEl.textContent = slider.value;
 /* CHANGE THE CHARACTER LENGTH WHEN CHANGED AND SLIDER RANGE*/
 slider.addEventListener("input", (e) => {
   const value =
@@ -46,6 +45,7 @@ formEl.addEventListener("submit", (e) => {
   passwordEl.value = pass;
 
   checkPassword();
+  clipboardCopy(pass);
 });
 
 /* PASSWORD STRENGTH */
@@ -71,7 +71,7 @@ function checkPassword() {
     strength += 1;
   }
 
-  /* NUMBERS CHECK */
+  /* Symbols CHECK */
   if (passwordEl.value.match(/[^A-Za-z0-9]/)) {
     strength += 1;
   }
@@ -92,3 +92,26 @@ function renderColor(value) {
   if (value >= 4) renderBoxes[2].classList.add("box-active");
   if (value >= 5) renderBoxes[3].classList.add("box-active");
 }
+
+/* FUNCTION TO COPY THE PASSWORD */
+function clipboardCopy(password) {
+  const copyBtn = document.getElementById("copy-btn");
+  const copyText = document.getElementById("copied-txt");
+
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard
+      .writeText(password)
+      .then(() => {
+        copyText.style.display = "inline-block";
+
+        setTimeout(() => {
+          copyText.style.display = "none";
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  });
+}
+
+clipboardCopy(passwordEl.value);

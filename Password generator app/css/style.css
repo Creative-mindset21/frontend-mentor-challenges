@@ -97,8 +97,6 @@ label {
   position: relative;
   background: var(--color-gray-800);
   margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
 }
 
 .pass-output .copied-txt {
@@ -107,6 +105,10 @@ label {
   line-height: 20px;
   color: var(--color-green-200);
   text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  transform: translateY(-50%);
   display: none;
 }
 
