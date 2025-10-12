@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/Creative-mindset21/frontend-mentor-challenges/tree/main/Password%20generator%20app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://password-gen-21.vercel.app/)
 
 ## My process
 
