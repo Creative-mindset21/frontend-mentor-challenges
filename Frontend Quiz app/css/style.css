@@ -1,0 +1,240 @@
+/* CUSTOM FONTS  */
+@font-face {
+  src: url("../assets/fonts/Rubik-VariableFont_wght.ttf");
+  font-family: "Rubik";
+}
+
+@font-face {
+  src: url("../assets/fonts/Rubik-Italic-VariableFont_wght.ttf");
+  font-family: "Rubik Italic";
+}
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-grey-500: #626c7f;
+  --color-grey-50: #f4f6fa;
+  --color-blue-950: #2d3949;
+  --color-blue-900: #313e51;
+  --color-blue-850: #3b4d66;
+  --color-blue-500: #306aff;
+  --color-blue-300: #abc1e1;
+  --color-blue-100: #edf1f9;
+  --color-blue-50: #ebf0ff;
+  --color-green-500: #2fd887;
+  --color-green-100: #e0fdef;
+  --color-purple-600: #a729f5;
+  --color-purple-100: #f6e7ff;
+  --color-orange-400: #ff7e35;
+  --color-orange-50: #fff5ed;
+  --color-red-500: #ee5454;
+
+  /* Mobile Font Size */
+  --fs-1: 5.5rem;
+  --fs-2: 2.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.125rem;
+  --fs-5: 0.875rem;
+  --fs-6: 1.25rem;
+
+  /* Transition */
+  --transition: all 0.4s ease;
+}
+
+/* GENERAL CSS STYLING */
+body {
+  background: url("../assets/images/pattern-background-mobile-light.svg")
+      no-repeat,
+    var(--color-grey-50);
+  background-size: cover;
+  font-family: "Rubik", sans-serif;
+  padding: 3.375rem 1.5rem;
+  position: relative;
+  inline-size: 100%;
+  block-size: 100vh;
+}
+
+h1 {
+  font-size: var(--fs-2);
+  line-height: 100%;
+  color: var(--color-blue-900);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.light-text {
+  font-weight: 300;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER SECTION */
+header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.theme-changer {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.theme-slider {
+  display: inline-block;
+  inline-size: 32px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-slider .theme {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: var(--color-purple-600);
+  transition: var(--transition);
+}
+
+.slider::before {
+  content: "";
+  inline-size: 12px;
+  block-size: 12px;
+  background: var(--color-white);
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  transition: var(--transition);
+}
+
+input:checked + .slider::before {
+  transform: translateX(12px);
+}
+
+.slider.round {
+  border-radius: 999px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+/* MAIN SECTION STYLING */
+.wrapper {
+  padding-block: 2rem;
+  inline-size: 100%;
+  max-inline-size: 640px;
+  margin-inline: auto;
+}
+
+.welcome {
+  gap: 2.5rem;
+}
+
+.desc {
+  font-size: var(--fs-5);
+  line-height: 150%;
+  font-family: "Rubik Italic";
+  color: var(--color-grey-500);
+}
+
+/* !Cards Section */
+.cards {
+  gap: 1rem;
+}
+
+.card {
+  background: var(--color-white);
+  box-shadow: 0 16px 40px 0 rgba(143, 160, 193, 0.14);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 12px;
+}
+
+.card img {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+.card a {
+  inline-size: 100%;
+  color: var(--color-blue-900);
+  font-size: var(--fs-4);
+  line-height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    /*  Font Size */
+    --fs-1: 9rem;
+    --fs-2: 4rem;
+    --fs-3: 2.25rem;
+    --fs-4: 1.75rem;
+    --fs-5: 1.5rem;
+  }
+
+  .welcome {
+    gap: 4rem;
+  }
+
+  .desc {
+    font-size: var(--fs-6);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .welcome {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .welcome-text {
+    flex-basis: 55%;
+  }
+
+  .cards {
+    flex-basis: 45%;
+  }
+
+  .wrapper {
+    max-inline-size: 1157px;
+    padding-block: 6.1875rem;
+  }
+}

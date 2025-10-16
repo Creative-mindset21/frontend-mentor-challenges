@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="Frontend Quiz App" />
+
+    <!-- FAVICON LINKING -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | Frontend quiz app</title>
+
+    <!-- CUSTOM CSS LINKING -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="theme-changer">
+        <img src="./assets/images/icon-sun-dark.svg" alt="Sun Light SVG" />
+
+        <label for="theme" class="theme-slider">
+          <input type="checkbox" name="theme" id="theme" class="theme" />
+          <div class="round slider"></div>
+        </label>
+
+        <img src="./assets/images/icon-moon-dark.svg" alt="Moon SVG" />
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <!-- Quiz menu start -->
+
+      <section class="welcome flex">
+        <div class="welcome-text">
+          <h1><span class="light-text">Welcome to the</span> Frontend Quiz!</h1>
+          <p class="desc">Pick a subject to get started.</p>
+        </div>
+
+        <ul class="cards flex" id="cards"></ul>
+      </section>
+
+      <!-- Quiz menu end -->
+
+      <!-- Quiz question start -->
+
+      <!--! Question -->
+      <!-- number -->
+      <!-- !of 10 A B C D Submit answer -->
+
+      <!-- Quiz question end -->
+
+      <!-- Quiz completed start -->
+
+      <!-- !Quiz completed You scored... -->
+
+      <!-- score -->
+      <!-- !out of 10 -->
+
+      <!-- Quiz completed end -->
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
