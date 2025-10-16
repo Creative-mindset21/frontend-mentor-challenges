@@ -190,6 +190,27 @@ input:checked + .slider::before {
   line-height: 100%;
 }
 
+/*! QUESTIONS STYLING */
+.question-text {
+  margin-bottom: 2.5rem;
+}
+
+.questions {
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.question {
+  font-size: var(--fs-3);
+  line-height: 120%;
+  color: var(--color-blue-900);
+  font-weight: 600;
+}
+
+.answer-buttons {
+  gap: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   :root {
     /*  Font Size */

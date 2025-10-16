@@ -30,7 +30,7 @@ function renderCards(data) {
 
   data.forEach((dat, index) => {
     htmlEL += `
-            <li class="card">
+            <li class="card" data-category="${dat.title}" id="card">
                 <img src="${dat.icon}" alt="HTML SVG" style="background: var(${colors[index]})"/>
                 <a href="#"> ${dat.title} </a>
             </li>
@@ -38,4 +38,20 @@ function renderCards(data) {
   });
 
   cards.innerHTML = htmlEL;
+
+  getCategory();
 }
+
+/* GET THE CATEGORY FOR THE QUIZ */
+function getCategory() {
+  const cardsEl = document.querySelectorAll("#card");
+
+  cardsEl.forEach((card) => {
+    card.addEventListener("click", () => {
+      localStorage.setItem("selectedQuiz", card.dataset.category);
+      window.location.href = "quiz.html";
+    });
+  });
+}
+
+localStorage.clear();

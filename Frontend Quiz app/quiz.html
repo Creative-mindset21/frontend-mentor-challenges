@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="Frontend Quiz App" />
+
+    <!-- FAVICON LINKING -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | Frontend quiz app</title>
+
+    <!-- CUSTOM CSS LINKING -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="theme-changer">
+        <img src="./assets/images/icon-sun-dark.svg" alt="Sun Light SVG" />
+
+        <label for="theme" class="theme-slider">
+          <input type="checkbox" name="theme" id="theme" class="theme" />
+          <div class="round slider"></div>
+        </label>
+
+        <img src="./assets/images/icon-moon-dark.svg" alt="Moon SVG" />
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <!-- Quiz menu start -->
+
+      <section class="question-text">
+        <div class="questions flex">
+          <p class="desc">Question 6 of 10</p>
+          <h2 class="question" id="question">
+            Which of these color contrast ratios defines the minimum WCAG 2.1
+            Level AA requirement for normal text?
+          </h2>
+        </div>
+
+        <input type="range" name="" id="" />
+      </section>
+
+      <ul class="answer-buttons flex" id="cards"></ul>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
