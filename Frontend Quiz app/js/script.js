@@ -53,5 +53,3 @@ function getCategory() {
     });
   });
 }
-
-localStorage.clear();

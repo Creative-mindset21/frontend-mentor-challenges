@@ -174,9 +174,12 @@ input:checked + .slider::before {
   align-items: center;
   gap: 1rem;
   border-radius: 12px;
+  transition: var(--transition);
+  border: 3px solid transparent;
 }
 
-.card img {
+.card img,
+.option-letter {
   inline-size: 2.5rem;
   block-size: 2.5rem;
   padding: 0.25rem;
@@ -211,13 +214,55 @@ input:checked + .slider::before {
   gap: 1rem;
 }
 
+.answer-buttons button {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: var(--fs-4);
+  line-height: 100%;
+  color: var(--color-blue-900);
+}
+
+.option-letter {
+  display: grid;
+  place-content: center;
+  background: var(--color-grey-50);
+  color: var(--color-grey-500);
+  transition: var(--transition);
+}
+
+.question-card:hover,
+.selected {
+  border: 3px solid var(--color-purple-600);
+}
+
+.question-card:hover .option-letter {
+  background: var(--color-purple-600);
+  color: var(--color-white);
+}
+
+.next-btn {
+  background: var(--color-purple-600);
+  border-radius: 12px;
+  margin-inline: auto;
+  padding: 1rem;
+  font: inherit;
+  border: none;
+  outline: none;
+  inline-size: 100%;
+  margin-top: 1rem;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
 @media screen and (min-width: 768px) {
   :root {
     /*  Font Size */
     --fs-1: 9rem;
     --fs-2: 4rem;
     --fs-3: 2.25rem;
-    --fs-4: 1.75rem;
+    --fs-4: 1.25rem;
     --fs-5: 1.5rem;
   }
 
@@ -227,6 +272,10 @@ input:checked + .slider::before {
 
   .desc {
     font-size: var(--fs-6);
+  }
+
+  .next-btn {
+    margin-top: 2rem;
   }
 }
 
@@ -257,5 +306,19 @@ input:checked + .slider::before {
   .wrapper {
     max-inline-size: 1157px;
     padding-block: 6.1875rem;
+  }
+
+  .question-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+
+  .options {
+    flex-basis: 55%;
+  }
+
+  .question-text {
+    flex-basis: 45%;
   }
 }
