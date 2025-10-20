@@ -237,6 +237,10 @@ input:checked + .slider::before {
   border: 3px solid var(--color-purple-600);
 }
 
+.question-card.correct {
+  border: 3px solid var(--color-green-500);
+}
+
 .question-card:hover .option-letter {
   background: var(--color-purple-600);
   color: var(--color-white);

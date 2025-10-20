@@ -30,15 +30,15 @@ function renderQuiz(data) {
   }
 
   let current = 0;
+  let score = 0;
   let selectedOptionIndex = null;
-
-  // Letters for options
   const optionLetters = ["A", "B", "C", "D"];
 
   // Function to show a question
   function showQuestion() {
     optionsContainer.innerHTML = "";
     selectedOptionIndex = null;
+    nextBtn.disabled = true;
 
     const currentQuestion = quiz.questions[current];
     questionsEl.textContent = currentQuestion.question;
@@ -64,10 +64,27 @@ function renderQuiz(data) {
     // Adding event listeners to the buttons
     buttons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        buttons.forEach((b) => b.classList.remove("selected"));
-
-        e.currentTarget.classList.add("selected");
+        if (selectedOptionIndex !== null) return;
         selectedOptionIndex = parseInt(e.currentTarget.dataset.index);
+
+        const correctAnswer = currentQuestion.answer;
+
+        buttons.forEach((b, i) => {
+          if (i === correctAnswer) {
+            b.classList.add("correct");
+          }
+
+          if (i === selectedOptionIndex && i !== correctAnswer) {
+            b.classList.add("wrong");
+          }
+          b.disabled = true;
+        });
+
+        if (selectedOptionIndex === correctAnswer) {
+          score++;
+        }
+
+        nextBtn.disabled = false;
       });
     });
   }
@@ -82,6 +99,7 @@ function renderQuiz(data) {
       showQuestion();
     } else {
       nextBtn.textContent = "Submit Answers";
+      console.log(score);
     }
   }
 
