@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/Creative-mindset21/frontend-mentor-challenges/tree/main/Interactive%20rating%20component)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://interative-rating-21.vercel.app/)
 
 ## My process
 
