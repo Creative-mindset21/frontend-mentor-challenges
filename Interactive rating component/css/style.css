@@ -1,0 +1,206 @@
+/* CUSTOM CSS FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM CSS VARAIBLES */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey-950: #131518;
+  --color-grey-900: #262e38;
+  --color-grey-500: #969fad;
+  --color-orange-500: #fc7614;
+
+  /* Font Size */
+  --fs-1: 1.75rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1rem;
+  --fs-4: 0.9375rem;
+  --fs-5: 0.875rem;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+/* GENERAL CSS STYLING */
+
+body {
+  font-family: "Overpass", sans-serif;
+  background: var(--color-grey-950);
+  inline-size: 100%;
+  min-block-size: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: var(--fs-2);
+  color: var(--color-white);
+  line-height: 30px;
+}
+
+p {
+  font-size: var(--fs-5);
+  color: var(--color-grey-500);
+  line-height: 22px;
+}
+
+img {
+  object-fit: cover;
+}
+
+.wrapper,
+.thanks-wrapper {
+  max-inline-size: 327px;
+  background: radial-gradient(#232a34, #181e27);
+  padding: 1.5rem;
+  border-radius: 15px;
+  gap: 1.5rem;
+}
+
+.wrapper {
+  /* display: none; */
+}
+
+.star-icon {
+  background: var(--color-grey-900);
+  margin-right: auto;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  display: grid;
+  place-content: center;
+  border-radius: 100vmax;
+}
+
+.texts {
+  gap: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-btn {
+  background: var(--color-grey-900);
+  border: none;
+  outline: none;
+  inline-size: 2.625rem;
+  block-size: 2.625rem;
+  display: grid;
+  place-content: center;
+  border-radius: 100vmax;
+  color: var(--color-grey-500);
+}
+
+.rating-btn:hover,
+.rating-btn:focus-visible {
+  background: var(--color-orange-500);
+  color: var(--color-grey-900);
+}
+
+.rating-btn.active {
+  background: var(--color-white);
+}
+
+.submit-btn {
+  background: var(--color-orange-500);
+  border: none;
+  outline: none;
+  padding: 1rem 0;
+  border-radius: 22.5px;
+  color: var(--color-grey-950);
+  text-transform: uppercase;
+}
+
+.submit-btn:hover {
+  background: var(--color-white);
+}
+
+.rating-btn,
+.submit-btn {
+  font-size: var(--fs-5);
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1.87px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+/* THANK YOU CSS STYLING */
+
+.thank-you-icon {
+  inline-size: 9rem;
+  margin-inline: auto;
+}
+
+.thank-you-icon img {
+  inline-size: 100%;
+}
+
+.thanks-wrapper {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  display: none;
+}
+
+.selected-message {
+  background: var(--color-grey-900);
+  color: var(--color-orange-500);
+  font-size: var(--fs-5);
+  line-height: 18px;
+  text-align: center;
+  display: inline-block;
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 22.5px;
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: var(--fs-1);
+    line-height: 35px;
+  }
+
+  p {
+    font-size: var(--fs-4);
+    line-height: 24px;
+  }
+
+  .wrapper,
+  .thanks-wrapper {
+    max-inline-size: 412px;
+    padding-block: 2rem;
+  }
+
+  .rating-btn {
+    font-size: var(--fs-3);
+    line-height: 24px;
+  }
+
+  .selected-message {
+    font-size: var(--fs-4);
+    line-height: 24px;
+  }
+
+  .thanks-wrapper {
+    padding: 2.5rem 2rem;
+  }
+}
