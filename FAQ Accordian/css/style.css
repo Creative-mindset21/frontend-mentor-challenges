@@ -122,6 +122,18 @@ summary {
   cursor: pointer;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: var(--fs-1);
