@@ -52,6 +52,7 @@ h2 {
 
 h2 {
   font-size: 1rem;
+  transition: all 0.5s ease;
 }
 
 p {
@@ -69,6 +70,11 @@ img {
 
 details {
   padding-block: 1.5rem;
+}
+
+details:hover h2,
+details:focus-within h2 {
+  color: var(--color-violet-600);
 }
 
 details:not(:last-child) {
