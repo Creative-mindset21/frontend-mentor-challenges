@@ -1,0 +1,272 @@
+/* CUSTOM CSS FONTS LINKING */
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Karla Italic";
+  src: url("../assets/fonts/Karla-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-grey-900: #2a4144;
+  --color-grey-500: #86a2a5;
+  --color-green-600: #0c7d69;
+  --color-green-200: #e0f1e8;
+  --color-red: #d73c3c;
+
+  /* Typography */
+  --fs-1: 2rem;
+  --fs-2: 1.125rem;
+  --fs-3: 1rem;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  inline-size: 100%;
+  min-block-size: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--color-green-200);
+  position: relative;
+}
+
+h1 {
+  color: var(--color-grey-900);
+  font-size: var(--fs-1);
+  letter-spacing: -1px;
+  margin-bottom: 2rem;
+}
+
+label,
+legend {
+  font-size: var(--fs-3);
+  line-height: 150%;
+  color: var(--color-grey-900);
+  margin-bottom: 8px;
+}
+
+fieldset {
+  border: none;
+}
+
+p {
+  position: absolute;
+  left: -999%;
+}
+
+textarea {
+  block-size: 240px;
+  resize: none;
+  color: var(--color-grey-900);
+  padding: 0.75rem 1.5rem;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+.radio-option {
+  padding: 0.75rem 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+.radio-option,
+textarea {
+  border-radius: 8px;
+  border: 1px solid var(--color-grey-500);
+  transition: all 0.5s ease;
+}
+
+:is(input[type="text"], input[type="email"], textarea):is(
+    :hover,
+    :focus-within
+  ) {
+  border-color: var(--color-green-600);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 2rem 1rem;
+}
+
+.form-wrapper {
+  gap: 2.5rem;
+}
+
+.input,
+.names {
+  gap: 1.5rem;
+}
+
+.names,
+.radios {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.required {
+  color: var(--color-green-600);
+  font-size: var(--fs-3);
+  line-height: 150%;
+}
+
+.radio-option {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.radio-option input {
+  inline-size: 24px;
+  transition: all 0.5s ease;
+}
+
+.radio-option input:checked {
+  appearance: none;
+  background: url("../assets/images/icon-radio-selected.svg") no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.radio-label {
+  margin-bottom: 0;
+  color: var(--color-grey-900);
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.radio-option:has(input:checked) {
+  background: var(--color-green-200);
+}
+
+/* CONSENT */
+.submit {
+  gap: 2.5rem;
+}
+
+.consent-message {
+  display: flex;
+  align-items: center;
+}
+
+.consent-message input {
+  transition: all 0.4s ease;
+  inline-size: 18px;
+  block-size: 18px;
+}
+
+.consent-message input:checked {
+  appearance: none;
+  background: url("../assets/images/icon-checkbox-check.svg") no-repeat;
+  background-position: center;
+  inline-size: 18px;
+  block-size: 18px;
+}
+
+.consent-message label {
+  margin-bottom: 0;
+  padding-inline: 1rem;
+}
+
+.submit-btn {
+  background: var(--color-green-600);
+  border: none;
+  color: var(--color-white);
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: var(--fs-2);
+  line-height: 150%;
+  font-family: inherit;
+}
+
+/* SUCCESS MESSAGE */
+.success-message {
+  background: var(--color-grey-900);
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  color: var(--color-white);
+}
+
+.tick-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.message-bold {
+  font-size: var(--fs-2);
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.thanks {
+  color: var(--color-green-200);
+  font-size: var(--fs-3);
+  line-height: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  textarea {
+    block-size: 132px;
+  }
+
+  .wrapper {
+    min-inline-size: 690px;
+    padding: 2.5rem;
+    margin-top: 6rem;
+  }
+
+  .names,
+  .radios {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  /* SUCCESS MESSAGE */
+  .success-message {
+    top: 24px;
+    left: 9.9375rem;
+    right: 9.9375rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    min-inline-size: 736px;
+  }
+
+  /* SUCCESS MESSAGE */
+  .success-message {
+    top: 24px;
+    left: 15rem;
+    right: 15rem;
+  }
+}

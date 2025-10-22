@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="Contact Form" />
+
+    <!-- FAVICON LINKING -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- CSS LINKING -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>Contact Us</h1>
+
+      <form action="" class="form-wrapper flex">
+        <section class="input flex">
+          <div class="names">
+            <div class="flex">
+              <label for="fname">
+                First Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                autocomplete="given-name"
+                required
+                aria-describedby="firstname instructions"
+              />
+              <p id="firstname instructions">This field is required</p>
+            </div>
+
+            <div class="flex">
+              <label for="lname">
+                Last Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                autocomplete="family-name"
+                required
+                aria-describedby="lastname instructions"
+              />
+              <p id="lastname instructions">This field is required</p>
+            </div>
+          </div>
+
+          <div class="email-container flex">
+            <label for="email">
+              Email Address <span class="required">*</span></label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              required
+              aria-describedby="email instructions"
+            />
+            <p id="email instructions">Please enter a valid email address</p>
+          </div>
+
+          <fieldset>
+            <legend>Query Type <span class="required">*</span></legend>
+
+            <div class="radios">
+              <div class="radio-option">
+                <input type="radio" name="q-type" id="g-enquiry" />
+                <label for="g-enquiry" class="radio-label"
+                  >General Enquiry</label
+                >
+              </div>
+
+              <div class="radio-option">
+                <input type="radio" name="q-type" id="s-request" />
+                <label for="s-request" class="radio-label"
+                  >Support Request</label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Please select a query type  -->
+
+          <div class="message flex">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea name="message" id="message" required></textarea>
+          </div>
+        </section>
+
+        <section class="submit flex">
+          <div class="consent-message">
+            <input
+              type="checkbox"
+              name="consent"
+              id="consent"
+              aria-describedby="consent-instructions"
+            />
+            <label for="consent">
+              I consent to being contacted by the team
+              <span class="required">*</span></label
+            >
+            <p id="consent-instructions">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+
+          <button type="submit" id="submit-btn" class="submit-btn">
+            Submit
+          </button>
+        </section>
+      </form>
+
+      <section class="success-message">
+        <div class="tick-message">
+          <img src="./assets/images/icon-success-check.svg" alt="" />
+          <span class="message-bold">Message Sent!</span>
+        </div>
+
+        <span class="thanks"
+          >Thanks for completing the form. We'll be in touch soon!</span
+        >
+      </section>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
