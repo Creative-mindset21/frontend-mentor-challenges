@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Creative-mindset21/frontend-mentor-challenges/tree/main/FAQ%20Accordian)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/Creative-mindset21/frontend-mentor-challenges/tree/main/FAQ%20Accordian)
+- Live Site URL: [Live site](https://faq-accordion-21.vercel.app/)
 
 ## My process
 
