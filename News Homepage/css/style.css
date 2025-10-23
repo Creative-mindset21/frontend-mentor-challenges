@@ -28,7 +28,7 @@
   --color-gold-400: #e9aa52;
   --color-red-500: #f15d51;
 
-  /* TYPOGRAPHY */
+  /* Typography */
   --fs-1: 3.5rem;
   --fs-2: 2.5rem;
   --fs-3: 2rem;
@@ -36,6 +36,9 @@
   --fs-5: 1.125rem;
   --fs-6: 0.9375rem;
   --fs-7: 0.875rem;
+
+  /* Transitions */
+  --transition: all 0.5s ease;
 }
 
 /* GENERAL CSS STYLING */
@@ -118,8 +121,9 @@ main {
   top: 0;
   bottom: 0;
   background: var(--color-white);
-  padding: 27px 23.8px 0 21px;
+  padding: 27px 21px;
   inline-size: 16rem;
+  transition: var(--transition);
 }
 
 .mobile-nav ul {
@@ -239,6 +243,11 @@ main {
     padding-inline: 5rem;
   }
 
+  .mobile-nav {
+    padding-inline: 2.25rem;
+    inline-size: 19.5rem;
+  }
+
   .hero-right {
     padding: 2rem 2.5rem;
   }
@@ -256,6 +265,10 @@ main {
   }
 
   .btn {
+    display: none;
+  }
+
+  .mobile-nav {
     display: none;
   }
 
