@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CUSTOM META TAGS -->
+    <meta name="author" content="Creative Mindset" />
+    <meta name="description" content="News HomePage" />
+
+    <!-- FAVICON LINKING -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/images/logo.svg" alt="Logo SVG" />
+
+      <!-- MOBILE NAVIGATION -->
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
+
+      <button>
+        <img
+          src="./assets/images/icon-menu.svg"
+          alt="Menu Icon"
+          aria-describedby="menu-toggle"
+        />
+
+        <p id="menu-toggle" class="hidden">Click to open the navigation</p>
+      </button>
+    </header>
+
+    <main>
+      <section class="top-section">
+        <div class="hero-left">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
+            />
+
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt="Web3 image"
+            />
+          </picture>
+
+          <h1>The Bright Future of Web 3.0?</h1>
+          <p class="hero-desc">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="read-more">Read more</button>
+        </div>
+
+        <div class="hero-right">
+          New Hydrogen VS Electric Cars Will hydrogen-fueled cars ever catch up
+          to EVs? The Downsides of AI Artistry What are the possible adverse
+          effects of on-demand AI image generation? Is VC Funding Drying Up?
+          Private funding by VC firms is down 50% YOY. We take a look at what
+          that means.
+        </div>
+      </section>
+      01 Reviving Retro PCs What happens when old PCs are given modern upgrades?
+      02 Top 10 Laptops of 2022 Our best picks for various needs and budgets. 03
+      The Growth of Gaming How the pandemic has sparked fresh opportunities.
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
