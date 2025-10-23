@@ -271,3 +271,12 @@ textarea {
     right: 15rem;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  /* SUCCESS MESSAGE */
+  .success-message {
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
