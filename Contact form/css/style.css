@@ -213,6 +213,7 @@ textarea {
   left: 12px;
   right: 12px;
   color: var(--color-white);
+  display: none;
 }
 
 .tick-message {

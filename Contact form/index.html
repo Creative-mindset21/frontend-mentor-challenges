@@ -26,7 +26,7 @@
     <main class="wrapper">
       <h1>Contact Us</h1>
 
-      <form action="" class="form-wrapper flex">
+      <form action="" class="form-wrapper flex" id="form-el">
         <section class="input flex">
           <div class="names">
             <div class="flex">
@@ -80,14 +80,14 @@
 
             <div class="radios">
               <div class="radio-option">
-                <input type="radio" name="q-type" id="g-enquiry" />
+                <input type="radio" name="q-type" id="g-enquiry" required />
                 <label for="g-enquiry" class="radio-label"
                   >General Enquiry</label
                 >
               </div>
 
               <div class="radio-option">
-                <input type="radio" name="q-type" id="s-request" />
+                <input type="radio" name="q-type" id="s-request" required />
                 <label for="s-request" class="radio-label"
                   >Support Request</label
                 >
@@ -110,6 +110,7 @@
               name="consent"
               id="consent"
               aria-describedby="consent-instructions"
+              required
             />
             <label for="consent">
               I consent to being contacted by the team
@@ -126,7 +127,7 @@
         </section>
       </form>
 
-      <section class="success-message">
+      <section class="success-message" id="success-message">
         <div class="tick-message">
           <img src="./assets/images/icon-success-check.svg" alt="" />
           <span class="message-bold">Message Sent!</span>
@@ -143,5 +144,7 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div> -->
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
