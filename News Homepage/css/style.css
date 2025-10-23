@@ -74,12 +74,22 @@ h3 {
   color: var(--color-white);
   line-height: 24px;
   margin-bottom: 8px;
+  transition: var(--transition);
+}
+
+h3:is(:hover, :focus-within) {
+  color: var(--color-gold-400);
 }
 
 h4 {
   color: var(--color-navy-950);
   font-size: var(--fs-5);
   line-height: 24px;
+  transition: var(--transition);
+}
+
+h4:is(:hover, :focus-within) {
+  color: var(--color-red-500);
 }
 
 .container {
@@ -180,6 +190,13 @@ main {
   letter-spacing: 4.38px;
   font-weight: 700;
   margin-top: 1.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.read-more:is(:hover, :focus-within) {
+  background: var(--color-navy-950);
+  color: var(--color-white);
 }
 
 /** Hero Right Section */
@@ -285,6 +302,11 @@ main {
     font-size: var(--fs-6);
     line-height: 26px;
     color: var(--color-navy-600);
+    transition: var(--transition);
+  }
+
+  :is(.desktop-nav ul a):is(:focus-visible, :hover) {
+    color: var(--color-red-500);
   }
 
   .top-section {
