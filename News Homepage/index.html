@@ -16,16 +16,28 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    <!-- CUSTOM CSS LINKING -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <!-- TITLE -->
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <img src="./assets/images/logo.svg" alt="Logo SVG" />
 
-      <!-- MOBILE NAVIGATION -->
+      <!--! MOBILE NAVIGATION -->
       <nav class="mobile-nav">
-        <ul>
+        <button id="menu-close" class="menu-close btn">
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            alt="Click to close"
+            aria-describedby="menu-close"
+          />
+
+          <p id="menu-close" class="hidden">Click to close the navigation</p>
+        </button>
+        <ul class="flex">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
@@ -34,7 +46,7 @@
         </ul>
       </nav>
 
-      <!-- DESKTOP NAVIGATION -->
+      <!--! DESKTOP NAVIGATION -->
       <nav class="desktop-nav">
         <ul>
           <li><a href="#">Home</a></li>
@@ -45,14 +57,14 @@
         </ul>
       </nav>
 
-      <button>
+      <button class="btn">
         <img
           src="./assets/images/icon-menu.svg"
           alt="Menu Icon"
-          aria-describedby="menu-toggle"
+          aria-describedby="menu-open"
         />
 
-        <p id="menu-toggle" class="hidden">Click to open the navigation</p>
+        <p id="menu-open" class="hidden">Click to open the navigation</p>
       </button>
     </header>
 
@@ -81,16 +93,74 @@
         </div>
 
         <div class="hero-right">
-          New Hydrogen VS Electric Cars Will hydrogen-fueled cars ever catch up
-          to EVs? The Downsides of AI Artistry What are the possible adverse
-          effects of on-demand AI image generation? Is VC Funding Drying Up?
-          Private funding by VC firms is down 50% YOY. We take a look at what
-          that means.
+          <h2>New</h2>
+          <div class="news">
+            <div class="news-box">
+              <h3>Hydrogen VS Electric Cars</h3>
+              <p class="news-preview">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>HThe Downsides of AI Artistry</h3>
+              <p class="news-preview">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>Is VC Funding Drying Up?</h3>
+              <p class="news-preview">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      01 Reviving Retro PCs What happens when old PCs are given modern upgrades?
-      02 Top 10 Laptops of 2022 Our best picks for various needs and budgets. 03
-      The Growth of Gaming How the pandemic has sparked fresh opportunities.
+
+      <ul class="bottom-section">
+        <li class="bottom-box">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="A retro PC" />
+          <div class="box-text">
+            <span class="number">01</span>
+            <h4>Reviving Retro PCs</h4>
+            <p class="bottom-preview">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </li>
+
+        <li class="bottom-box">
+          <img
+            src="./assets/images/image-top-laptops.jpg"
+            alt="Closeup image of a keyboard"
+          />
+          <div class="box-text">
+            <span class="number">02</span>
+            <h4>Top 10 Laptops of 2022</h4>
+            <p class="bottom-preview">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </li>
+
+        <li class="bottom-box">
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="A gaming console floating on a hand"
+          />
+          <div class="box-text">
+            <span class="number">03</span>
+            <h4>The Growth of Gaming</h4>
+            <p class="bottom-preview">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </li>
+      </ul>
     </main>
 
     <!-- <div class="attribution">

@@ -1,0 +1,100 @@
+/* CUSTOM FONT LINKING */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+/* RESET TO DEFAULTS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey-300: #c5c6ce;
+  --color-grey-200: #d8d8d8;
+  --color-navy-950: #00001a;
+  --color-navy-600: #5e607a;
+  --color-navy-600: #5e607a;
+  --color-gold-400: #e9aa52;
+  --color-red-500: #f15d51;
+
+  /* TYPOGRAPHY */
+  --fs-1: 3.5rem;
+  --fs-2: 2.5rem;
+  --fs-3: 2rem;
+  --fs-4: 1.25rem;
+  --fs-5: 1.125rem;
+  --fs-6: 0.9375rem;
+  --fs-7: 0.875rem;
+}
+
+/* GENERAL CSS STYLING */
+body {
+  background: var(--color-white);
+  inline-size: 100%;
+  min-block-size: 100vh;
+  position: relative;
+  font-family: "Inter";
+}
+
+.container {
+  padding-inline: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER STYLING */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.desktop-nav,
+.hidden {
+  display: none;
+}
+
+.mobile-nav {
+  position: absolute;
+  right: -99%; /* CHANGE TO 0 WHEN CLICKED */
+  top: 0;
+  bottom: 0;
+  background: var(--color-white);
+  padding: 27px 23.8px 0 21px;
+  inline-size: 16rem;
+}
+
+.mobile-nav ul {
+  gap: 1.5rem;
+}
+
+.mobile-nav ul a {
+  font-size: var(--fs-5);
+  color: var(--color-navy-950);
+}
+
+.menu-close {
+  margin-left: auto;
+  display: block;
+  margin-bottom: 5.5rem;
+}
