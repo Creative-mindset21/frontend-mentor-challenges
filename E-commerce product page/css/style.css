@@ -58,6 +58,10 @@ button {
   cursor: pointer;
 }
 
+main {
+  gap: 1.5rem;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -136,6 +140,8 @@ header {
 .slideshow-img {
   inline-size: 100%;
   block-size: 100%;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 .prev,
@@ -160,17 +166,4 @@ header {
   right: 1rem;
 }
 
-/*! Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/*  */

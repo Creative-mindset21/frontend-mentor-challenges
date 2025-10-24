@@ -14,7 +14,7 @@ const slide = document.getElementById("slideshow-img");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
-const imgSlides = [
+const images = [
   "./images/image-product-1.jpg",
   "./images/image-product-2.jpg",
   "./images/image-product-3.jpg",
@@ -24,11 +24,30 @@ const imgSlides = [
 let current = 0;
 
 function showSlide(i) {
-  if (i < 0) index = imgSlides.length - 1;
-  if (i >= imgSlides.length) i = 0;
+  if (i < 0) i = images.length - 1;
+  if (i >= images.length) i = 0;
+
   current = i;
-  slide.src = imgSlides[current];
+  slide.style.opacity = 0;
+
+  setTimeout(() => {
+    slide.src = images[current];
+    slide.style.opacity = 1;
+  }, 500);
+}
+
+function startSlideShow() {
+  intervalId = setInterval(() => showSlide(current + 1), 3000);
+}
+
+function stopSlideShow() {
+  clearInterval(intervalId);
 }
 
 prevBtn.addEventListener("click", () => showSlide(current - 1));
 nextBtn.addEventListener("click", () => showSlide(current + 1));
+
+startSlideShow();
+
+slide.addEventListener("mouseenter", stopSlideShow);
+slide.addEventListener("mouseleave", startSlideShow);
