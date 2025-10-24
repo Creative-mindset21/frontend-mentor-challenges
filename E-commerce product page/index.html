@@ -34,18 +34,17 @@
         </button>
 
         <img src="./images/logo.svg" alt="Sneakers logo" />
-      </div>
 
-      <div class="avatar">
-        <button class="cart-btn" aria-label="Click to view cart">
-          <img src="./images/icon-cart.svg" alt="" />
-        </button>
-
-        <img
-          src="./images/image-avatar.png"
-          alt="Avatar Image"
-          class="avatar-img"
-        />
+        <!-- DESKTOP NAV -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
       </div>
 
       <!-- MOBILE NAV -->
@@ -66,61 +65,112 @@
         </ul>
       </nav>
 
-      <!-- DESKTOP NAV -->
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="avatar">
+        <button class="cart-btn" aria-label="Click to view cart">
+          <img src="./images/icon-cart.svg" alt="" />
+        </button>
+
+        <img
+          src="./images/image-avatar.png"
+          alt="Avatar Image"
+          class="avatar-img"
+        />
+      </div>
     </header>
 
-    <main class="flex">
-      <section class="slideshow-imgs">
-        <img
-          src="./images/image-product-1.jpg"
-          alt="Sneakers shoe image 1"
-          class="slideshow-img"
-          id="slideshow-img"
-        />
+    <main class="flex main">
+      <div class="slide flex">
+        <section class="slideshow-imgs">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Sneakers shoe image 1"
+            class="slideshow-img"
+            id="slideshow-img"
+          />
 
-        <!-- Next and Previous Buttons -->
-        <button
-          class="prev"
-          aria-label="Click to show previous image"
-          id="prev"
-        >
-          <img src="./images/icon-previous.svg" alt="" />
-        </button>
+          <!-- Next and Previous Buttons -->
+          <button
+            class="prev"
+            aria-label="Click to show previous image"
+            id="prev"
+          >
+            <img src="./images/icon-previous.svg" alt="" />
+          </button>
 
-        <button class="next" aria-label="Click to show next image" id="next">
-          <img src="./images/icon-next.svg" alt="" />
-        </button>
-      </section>
+          <button class="next" aria-label="Click to show next image" id="next">
+            <img src="./images/icon-next.svg" alt="" />
+          </button>
+        </section>
 
-      <section class="texts container">
-        <span class="company">Sneaker Company</span>
-        <h1>Fall Limited Edition Sneakers</h1>
+        <ul class="thumbnail-img">
+          <li>
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+          </li>
+          <li>
+            <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+          </li>
+          <li>
+            <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+          </li>
+          <li>
+            <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
 
-        <p class="desc">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything
-          the weather can offer.
-        </p>
+      <section class="hero container">
+        <div class="hero-texts flex">
+          <span class="company">Sneaker Company</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+
+          <p class="desc">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
 
         <div class="prices">
           <div class="price-discount">
-            <p>$125.00</p>
+            <p class="current-price">$125.00</p>
             <p class="discount">50%</p>
           </div>
 
-          <div class="initial-price">$250.00</div>
+          <p class="initial-price">$250.00</p>
+        </div>
+
+        <div class="amount-cart flex">
+          <div class="amount">
+            <button
+              aria-label="Click to reduce numbers of shoes you use"
+              class="minus-btn"
+              id="minus-btn"
+            >
+              <img src="./images/icon-minus.svg" alt="" />
+            </button>
+            <span class="number" id="number">0</span>
+            <button
+              aria-label="Click to increase numbers of shoes you use"
+              class="plus-btn"
+              id="plus-btn"
+            >
+              <img src="./images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+
+          <button class="add-to-cart" id="add-to-cart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#69707D"
+                fill-rule="nonzero"
+                class="cart-svg"
+              />
+            </svg>
+            Add to cart
+          </button>
         </div>
       </section>
-      0 Add to cart
     </main>
 
     <!-- <div class="attribution">

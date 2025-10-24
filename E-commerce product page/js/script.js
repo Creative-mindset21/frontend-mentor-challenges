@@ -37,7 +37,7 @@ function showSlide(i) {
 }
 
 function startSlideShow() {
-  intervalId = setInterval(() => showSlide(current + 1), 3000);
+  let intervalId = setInterval(() => showSlide(current + 1), 3000);
 }
 
 function stopSlideShow() {
@@ -47,7 +47,24 @@ function stopSlideShow() {
 prevBtn.addEventListener("click", () => showSlide(current - 1));
 nextBtn.addEventListener("click", () => showSlide(current + 1));
 
-startSlideShow();
+// startSlideShow();
 
 slide.addEventListener("mouseenter", stopSlideShow);
 slide.addEventListener("mouseleave", startSlideShow);
+
+/* CHANGE THE IMAGE WHEN THE THUMBNAIL IS CLICKED */
+const thumbnailImgs = document.querySelectorAll(".thumbnail-img li img");
+
+thumbnailImgs.forEach((img, i) => {
+  img.addEventListener("click", () => {
+    slide.style.opacity = 0;
+    setTimeout(() => {
+      slide.src = images[i];
+      slide.style.opacity = 1;
+    }, 500);
+
+    thumbnailImgs.forEach((img) => img.classList.remove("thumbnail-active"));
+
+    img.classList.add("thumbnail-active");
+  });
+});
