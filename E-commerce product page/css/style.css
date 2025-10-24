@@ -1,0 +1,122 @@
+/* CUSTOM CSS VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+/* RESET TO DEFAULTS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* CUSTOM CSS VARIABLES */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-950: #1d2026;
+  --color-gray-500: #69707d;
+  --color-gray-300: #c3cad9;
+  --color-gray-100: #e4e9f2;
+  --color-gray-50: #f6f8fd;
+  --color-orange-500: #ff7e1b;
+  --color-gray-300: #ffab6a;
+
+  /* Typography */
+  --fs-1: 2.75rem;
+  --fs-2: 1.75rem;
+  --fs-3: 1rem;
+  --fs-4: 0.9375rem;
+  --fs-5: 0.8125rem;
+  --fs-6: 0.75rem;
+}
+
+/* GENERAL CSS STYLING */
+body {
+  background: var(--color-white);
+  inline-size: 100%;
+  block-size: 100vh;
+  font-family: "Kumbh Sans";
+  position: relative;
+}
+
+img {
+  object-fit: cover;
+  display: block;
+  block-size: auto;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-block: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*! Logo and Avatar */
+.container {
+  padding-inline: 1.5rem;
+}
+
+.logo,
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  gap: 1rem;
+}
+
+.avatar {
+  gap: 1.5rem;
+}
+
+.avatar-img {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+}
+
+/*! Navigation Styling */
+.mobile-nav {
+  position: fixed;
+  background: var(--color-white);
+  top: 0;
+  bottom: 0;
+  left: -99%;
+  inline-size: 15.625rem;
+  padding: 1.5rem;
+  padding-right: calc(1.5rem - 15.625rem);
+}
+
+.close-menu {
+  margin-bottom: 3.5rem;
+}
+
+.mobile-nav ul {
+  gap: 1.5rem;
+}
+
+.mobile-nav ul a {
+  color: var(--color-gray-950);
+  line-height: 26px;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.desktop-nav {
+  display: none;
+}
