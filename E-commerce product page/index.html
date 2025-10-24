@@ -49,7 +49,7 @@
       </div>
 
       <!-- MOBILE NAV -->
-      <nav class="mobile-nav">
+      <nav class="mobile-nav" id="mobile-nav">
         <button
           aria-label="Click to close the menu"
           class="close-menu"
@@ -79,24 +79,35 @@
     </header>
 
     <main>
-      <!-- <section class="slideshow-imgs">
-        <img src="./images/image-product-1.jpg" alt="Sneakers shoe image 1" />
-        <img src="./images/image-product-2.jpg" alt="Sneakers shoe image 2" />
-        <img src="./images/image-product-3.jpg" alt="Sneakers shoe image 3" />
-        <img src="./images/image-product-4.jpg" alt="Sneakers shoe image 4" />
+      <section class="slideshow-imgs">
+        <img
+          src="./images/image-product-1.jpg"
+          alt="Sneakers shoe image 1"
+          class="slideshow-img"
+          id="slideshow-img"
+        />
 
-        <button class="prev" aria-label="Click to show previous image">
-          <img src="./images/icon-next.svg" alt="" />
-        </button>
-
-        <button class="next" aria-label="Click to show next image">
+        <!-- Next and Previous Buttons -->
+        <button
+          class="prev"
+          aria-label="Click to show previous image"
+          id="prev"
+        >
           <img src="./images/icon-previous.svg" alt="" />
         </button>
-      </section> -->
-      Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers
-      are your perfect casual wear companion. Featuring a durable rubber outer
-      sole, they’ll withstand everything the weather can offer. $125.00 50%
-      $250.00 0 Add to cart
+
+        <button class="next" aria-label="Click to show next image" id="next">
+          <img src="./images/icon-next.svg" alt="" />
+        </button>
+      </section>
+
+      <section class="texts">
+        <span class="company">Sneaker Company</span>
+      </section>
+      Fall Limited Edition Sneakers These low-profile sneakers are your perfect
+      casual wear companion. Featuring a durable rubber outer sole, they’ll
+      withstand everything the weather can offer. $125.00 50% $250.00 0 Add to
+      cart
     </main>
 
     <!-- <div class="attribution">
@@ -105,5 +116,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

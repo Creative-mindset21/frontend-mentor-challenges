@@ -31,6 +31,9 @@
   --fs-4: 0.9375rem;
   --fs-5: 0.8125rem;
   --fs-6: 0.75rem;
+
+  /* Transition */
+  --transition: all 0.5s ease;
 }
 
 /* GENERAL CSS STYLING */
@@ -52,6 +55,7 @@ button {
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .flex {
@@ -100,6 +104,7 @@ header {
   inline-size: 15.625rem;
   padding: 1.5rem;
   padding-right: calc(1.5rem - 15.625rem);
+  transition: var(--transition);
 }
 
 .close-menu {
@@ -119,4 +124,53 @@ header {
 
 .desktop-nav {
   display: none;
+}
+
+/*! Slideshow Images */
+.slideshow-imgs {
+  inline-size: 100%;
+  max-inline-size: 1000px;
+  position: relative;
+}
+
+.slideshow-img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  background: var(--color-white);
+  border-radius: 100vmax;
+  display: grid;
+  place-content: center;
+  margin-top: -22px;
+  transition: var(--transition);
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+/*! Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
