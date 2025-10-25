@@ -74,3 +74,19 @@ const cartBtn = document.getElementById("cart-btn");
 cartBtn.addEventListener("click", () => {
   document.getElementById("cart").classList.toggle("block");
 });
+
+/* UPDATE THE AMOUNT WHEN CLICKED */
+const numberEl = document.getElementById("number");
+const plusBtn = document.getElementById("plus-btn");
+const minusBtn = document.getElementById("minus-btn");
+
+let score = 0;
+
+plusBtn.addEventListener("click", () => {
+  score++;
+  numberEl.textContent = score;
+});
+minusBtn.addEventListener("click", () => {
+  if (score > 0) score--;
+  numberEl.textContent = score;
+});
