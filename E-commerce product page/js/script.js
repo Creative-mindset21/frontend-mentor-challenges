@@ -48,9 +48,8 @@ prevBtn.addEventListener("click", () => showSlide(current - 1));
 nextBtn.addEventListener("click", () => showSlide(current + 1));
 
 // startSlideShow();
-
-slide.addEventListener("mouseenter", stopSlideShow);
-slide.addEventListener("mouseleave", startSlideShow);
+// slide.addEventListener("mouseenter", stopSlideShow);
+// slide.addEventListener("mouseleave", startSlideShow);
 
 /* CHANGE THE IMAGE WHEN THE THUMBNAIL IS CLICKED */
 const thumbnailImgs = document.querySelectorAll(".thumbnail-img li img");
@@ -67,4 +66,11 @@ thumbnailImgs.forEach((img, i) => {
 
     img.classList.add("thumbnail-active");
   });
+});
+
+/* OPEN CART CONTAINER */
+const cartBtn = document.getElementById("cart-btn");
+
+cartBtn.addEventListener("click", () => {
+  document.getElementById("cart").classList.toggle("block");
 });

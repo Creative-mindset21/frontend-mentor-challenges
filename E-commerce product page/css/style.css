@@ -150,6 +150,7 @@ header {
 .slide {
   inline-size: 100%;
   block-size: 100%;
+  position: relative;
 }
 
 .thumbnail-img {
@@ -159,7 +160,6 @@ header {
 .slideshow-imgs {
   inline-size: 100%;
   block-size: 100%;
-  position: relative;
 }
 
 .slideshow-img {
@@ -173,6 +173,7 @@ header {
 .next {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   inline-size: 2.5rem;
   block-size: 2.5rem;
   background: var(--color-white);
@@ -191,7 +192,7 @@ header {
   right: 1rem;
 }
 
-/* HERO TEXTS STYLING */
+/*! HERO TEXTS STYLING */
 .hero-texts {
   gap: 1rem;
   margin-bottom: 2rem;
@@ -211,7 +212,7 @@ header {
   line-height: 26px;
 }
 
-/* Prices Section */
+/*! Prices Section */
 
 .prices,
 .price-discount {
@@ -290,6 +291,82 @@ header {
   background: var(--color-orange-300);
 }
 
+/* ! CART STYLING */
+.cart {
+  position: fixed;
+  background: var(--color-white);
+  left: 50%;
+  top: 3.5rem;
+  transform: translateX(-50%);
+  inline-size: 360px;
+  block-size: 256px;
+  box-shadow: 0 20px 50px rgba(29, 32, 38, 0.1);
+  border-radius: 10px;
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.cart-text {
+  padding: 1.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-gray-100);
+  flex-basis: 10%;
+  font-size: var(--fs-3);
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.cart-container {
+  flex-basis: 90%;
+  inline-size: 100%;
+  block-size: 100%;
+  position: relative;
+}
+
+.cart-container > p {
+  color: var(--color-gray-500);
+  font-size: var(--fs-3);
+  font-weight: 700;
+  line-height: 26px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cart-container > div {
+  margin: 25px;
+  gap: 1.5rem;
+}
+
+.cart-container .item {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.cart-img {
+  inline-size: 3.125rem;
+  block-size: 3.125rem;
+  border-radius: 4px;
+}
+
+.item-name,
+.item-amount,
+.total-amount {
+  color: var(--color-gray-500);
+  font-size: var(--fs-3);
+  line-height: 26px;
+}
+
+.total-amount {
+  color: var(--color-gray-950);
+  font-weight: 700;
+}
+
 /*! TABLET MEDIA QUERIES */
 @media screen and (min-width: 768px) {
   h1 {
@@ -350,6 +427,10 @@ header {
   .add-to-cart {
     inline-size: 301.55px;
     block-size: 56px;
+  }
+
+  .cart {
+    transform: none;
   }
 }
 
@@ -422,5 +503,15 @@ header {
     border: 2px solid var(--color-orange-500);
     filter: blur(1px);
     border-radius: 10px;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .cart {
+    left: 62%;
+    transform: none;
   }
 }

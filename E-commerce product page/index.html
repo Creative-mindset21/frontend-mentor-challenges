@@ -66,7 +66,7 @@
       </nav>
 
       <div class="avatar">
-        <button class="cart-btn" aria-label="Click to view cart">
+        <button class="cart-btn" aria-label="Click to view cart" id="cart-btn">
           <img src="./images/icon-cart.svg" alt="" />
         </button>
 
@@ -79,8 +79,8 @@
     </header>
 
     <main class="flex main">
-      <div class="slide flex">
-        <section class="slideshow-imgs">
+      <section class="slide flex">
+        <div class="slideshow-imgs">
           <img
             src="./images/image-product-1.jpg"
             alt="Sneakers shoe image 1"
@@ -100,7 +100,7 @@
           <button class="next" aria-label="Click to show next image" id="next">
             <img src="./images/icon-next.svg" alt="" />
           </button>
-        </section>
+        </div>
 
         <ul class="thumbnail-img">
           <li>
@@ -116,7 +116,7 @@
             <img src="./images/image-product-4-thumbnail.jpg" alt="" />
           </li>
         </ul>
-      </div>
+      </section>
 
       <section class="hero container">
         <div class="hero-texts flex">
@@ -169,6 +169,43 @@
             </svg>
             Add to cart
           </button>
+        </div>
+      </section>
+
+      <section class="cart flex" id="cart">
+        <p class="cart-text">Cart</p>
+        <div class="cart-container">
+          <!--! SHOW EITHER ONE  -->
+          <!-- <p>Your cart is empty.</p> -->
+
+          <!-- <div class="flex">
+            <div class="item">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+                class="cart-img"
+              />
+
+              <div class="item-name-amount flex">
+                <span class="item-name">Fall Limited Edition Sneakers</span>
+
+                <div class="amounts">
+                  <span class="item-amount"> $125.00 x 3 </span>
+                  <span class="total-amount">$375.00</span>
+                </div>
+              </div>
+
+              <button
+                class="delete-btn"
+                id="delete-btn"
+                aria-label="Click to delete the item"
+              >
+                <img src="./images/icon-delete.svg" alt="" />
+              </button>
+            </div>
+
+            <button class="add-to-cart">Checkout</button>
+          </div> -->
         </div>
       </section>
     </main>
