@@ -160,6 +160,7 @@ header {
 .slideshow-imgs {
   inline-size: 100%;
   block-size: 100%;
+  position: relative;
 }
 
 .slideshow-img {
@@ -173,7 +174,6 @@ header {
 .next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   inline-size: 2.5rem;
   block-size: 2.5rem;
   background: var(--color-white);
