@@ -79,6 +79,7 @@
     </header>
 
     <main class="flex main">
+      <!--! IMAGE SLIDES AND THUMBNAIL -->
       <section class="slide flex">
         <div class="slideshow-imgs">
           <img
@@ -86,6 +87,7 @@
             alt="Sneakers shoe image 1"
             class="slideshow-img"
             id="slideshow-img"
+            title="Click to see lightbox"
           />
 
           <!-- Next and Previous Buttons -->
@@ -102,7 +104,7 @@
           </button>
         </div>
 
-        <ul class="thumbnail-img">
+        <ul class="thumbnail-img" id="thumbnail-img">
           <li>
             <img src="./images/image-product-1-thumbnail.jpg" alt="" />
           </li>
@@ -118,6 +120,7 @@
         </ul>
       </section>
 
+      <!--! HERO TEXT AND ADD TO CART -->
       <section class="hero container">
         <div class="hero-texts flex">
           <span class="company">Sneaker Company</span>
@@ -172,40 +175,69 @@
         </div>
       </section>
 
+      <!--! CART CONTAINER -->
       <section class="cart flex" id="cart">
         <p class="cart-text">Cart</p>
-        <div class="cart-container" id="cart-container">
-          <!--! SHOW EITHER ONE  -->
-          <!-- <p>Your cart is empty.</p> -->
+        <div class="cart-container" id="cart-container"></div>
+      </section>
 
-          <!-- <div class="flex">
-            <div class="item">
-              <img
-                src="./images/image-product-1-thumbnail.jpg"
-                alt=""
-                class="cart-img"
-              />
+      <!--! LIGHTBOX SECTION -->
+      <section class="lightbox" id="lightbox">
+        <div class="slide flex">
+          <div class="slideshow-imgs">
+            <button
+              aria-label="Click to close the lightbox"
+              class="close-menu lightbox-close"
+              id="close-lightbox"
+            >
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                  fill=""
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
 
-              <div class="item-name-amount flex">
-                <span class="item-name">Fall Limited Edition Sneakers</span>
+            <img
+              src="./images/image-product-1.jpg"
+              alt="Sneakers shoe image 1"
+              class="slideshow-img"
+              id="lightbox-img"
+            />
 
-                <div class="amounts">
-                  <span class="item-amount"> $125.00 x 3 </span>
-                  <span class="total-amount">$375.00</span>
-                </div>
-              </div>
+            <!-- Next and Previous Buttons -->
+            <button
+              class="prev light-prev"
+              aria-label="Click to show previous image"
+              id="light-prev"
+            >
+              <img src="./images/icon-previous.svg" alt="" />
+            </button>
 
-              <button
-                class="delete-btn"
-                id="delete-btn"
-                aria-label="Click to delete the item"
-              >
-                <img src="./images/icon-delete.svg" alt="" />
-              </button>
-            </div>
+            <button
+              class="next light-next"
+              aria-label="Click to show next image"
+              id="light-next"
+            >
+              <img src="./images/icon-next.svg" alt="" />
+            </button>
+          </div>
 
-            <button class="add-to-cart">Checkout</button>
-          </div> -->
+          <ul class="thumbnail-img" id="lightbox-thumb-img">
+            <li>
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+            </li>
+          </ul>
         </div>
       </section>
     </main>

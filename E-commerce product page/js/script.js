@@ -23,16 +23,16 @@ const images = [
 
 let current = 0;
 
-function showSlide(i) {
+function showSlide(img, i) {
   if (i < 0) i = images.length - 1;
   if (i >= images.length) i = 0;
 
   current = i;
-  slide.style.opacity = 0;
+  img.style.opacity = 0;
 
   setTimeout(() => {
-    slide.src = images[current];
-    slide.style.opacity = 1;
+    img.src = images[current];
+    img.style.opacity = 1;
   }, 500);
 }
 
@@ -44,29 +44,29 @@ function stopSlideShow() {
   clearInterval(intervalId);
 }
 
-prevBtn.addEventListener("click", () => showSlide(current - 1));
-nextBtn.addEventListener("click", () => showSlide(current + 1));
-
-// startSlideShow();
-// slide.addEventListener("mouseenter", stopSlideShow);
-// slide.addEventListener("mouseleave", startSlideShow);
+prevBtn.addEventListener("click", () => showSlide(slide, current - 1));
+nextBtn.addEventListener("click", () => showSlide(slide, current + 1));
 
 /* CHANGE THE IMAGE WHEN THE THUMBNAIL IS CLICKED */
-const thumbnailImgs = document.querySelectorAll(".thumbnail-img li img");
+const thumbnailImgs = document.querySelectorAll("#thumbnail-img li img");
 
-thumbnailImgs.forEach((img, i) => {
-  img.addEventListener("click", () => {
-    slide.style.opacity = 0;
-    setTimeout(() => {
-      slide.src = images[i];
-      slide.style.opacity = 1;
-    }, 500);
+function changeImage(thumbnail, imgs) {
+  thumbnail.forEach((img, i) => {
+    img.addEventListener("click", () => {
+      imgs.style.opacity = 0;
+      setTimeout(() => {
+        imgs.src = images[i];
+        imgs.style.opacity = 1;
+      }, 500);
 
-    thumbnailImgs.forEach((img) => img.classList.remove("thumbnail-active"));
+      thumbnail.forEach((img) => img.classList.remove("thumbnail-active"));
 
-    img.classList.add("thumbnail-active");
+      img.classList.add("thumbnail-active");
+    });
   });
-});
+}
+
+changeImage(thumbnailImgs, slide);
 
 /* OPEN CART CONTAINER */
 const cartBtn = document.getElementById("cart-btn");
@@ -98,6 +98,7 @@ const amount = document.getElementById("current-price");
 const cartContainer = document.getElementById("cart-container");
 
 let htmlEl = "";
+cartContainer.innerHTML = `<p>Your cart is empty.</p>`;
 
 addToCart.addEventListener("click", () => {
   htmlEl = `
@@ -135,3 +136,33 @@ addToCart.addEventListener("click", () => {
 
   cartContainer.innerHTML = htmlEl;
 });
+
+/* LIGHTBOX FUNCTION */
+const lightboxEl = document.getElementById("lightbox");
+const lightboxPrev = document.getElementById("light-prev");
+const lightboxNext = document.getElementById("light-next");
+const lightboxImgs = document.getElementById("lightbox-img");
+const closeLightbox = document.getElementById("close-lightbox");
+const lightBoxThumbImgs = document.querySelectorAll(
+  "#lightbox-thumb-img li img"
+);
+
+/* Display the lightbox when clicked */
+slide.addEventListener("click", () => (lightboxEl.style.display = "grid"));
+
+/* Show the Previous and Next Images  */
+lightboxPrev.addEventListener("click", () =>
+  showSlide(lightboxImgs, current - 1)
+);
+lightboxNext.addEventListener("click", () =>
+  showSlide(lightboxImgs, current + 1)
+);
+
+/* Close lightbox */
+closeLightbox.addEventListener(
+  "click",
+  () => (lightboxEl.style.display = "none")
+);
+
+/* MAKE THE LIGHTBOX THUMBNAIL IMGS WORK */
+changeImage(lightBoxThumbImgs, lightboxImgs);
