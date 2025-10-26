@@ -564,6 +564,15 @@ header {
     right: -1rem;
   }
 
+  :is(.light-prev, .light-next) svg {
+    stroke: var(--color-gray-950);
+    transition: var(--transition);
+  }
+
+  :is(.light-prev, .light-next):is(:hover, :focus-within) svg {
+    stroke: var(--color-orange-500);
+  }
+
   .lightbox-close {
     position: absolute;
     top: -2rem;
@@ -571,6 +580,11 @@ header {
   }
 
   .lightbox-close svg {
-    fill: white;
+    fill: var(--color-white);
+    transition: var(--transition);
+  }
+
+  .lightbox-close:is(:hover, :focus-within) svg {
+    fill: var(--color-orange-500);
   }
 }
