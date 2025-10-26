@@ -96,6 +96,7 @@ const addToCart = document.getElementById("add-to-cart");
 const productName = document.querySelector("h1");
 const amount = document.getElementById("current-price");
 const cartContainer = document.getElementById("cart-container");
+const cartNum = document.getElementById("cart-num");
 
 let htmlEl = "";
 cartContainer.innerHTML = `<p>Your cart is empty.</p>`;
@@ -135,6 +136,7 @@ addToCart.addEventListener("click", () => {
   `;
 
   cartContainer.innerHTML = htmlEl;
+  cartNum.textContent = score;
 });
 
 /* LIGHTBOX FUNCTION */

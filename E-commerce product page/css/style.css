@@ -113,6 +113,25 @@ header {
   block-size: 1.5rem;
 }
 
+.cart-btn {
+  position: relative;
+}
+
+.cart-num {
+  background: var(--color-orange-500);
+  color: var(--color-white);
+  border-radius: 6.5px;
+  font-size: 10px;
+  font-weight: 600;
+  width: 19px;
+  height: 13px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: -0.4rem;
+  right: -0.3rem;
+}
+
 /*! Navigation Styling */
 .mobile-nav {
   position: fixed;
