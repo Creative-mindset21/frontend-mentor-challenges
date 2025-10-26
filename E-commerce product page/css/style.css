@@ -460,6 +460,11 @@ header {
     margin-inline: auto;
   }
 
+  .avatar-img {
+    border: 2px solid var(--color-orange-500);
+    border-radius: 100vmax;
+  }
+
   .open-menu {
     display: none;
   }
