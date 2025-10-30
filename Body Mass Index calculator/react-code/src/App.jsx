@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Advises from "./components/Advises";
+import Limitations from "./components/Limitations";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <main>
           <Hero />
           <About />
+          <Advises />
+          <Limitations />
         </main>
       </div>
     </div>

@@ -53,6 +53,12 @@
   h1,
   h2 {
     line-height: 110%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
     letter-spacing: -5%;
     color: var(--color-blue-900);
   }
@@ -67,6 +73,19 @@
   h2 {
     font-size: var(--text-fs3);
     font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--text-fs4);
+    line-height: 120%;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    font-size: var(--text-fs5);
+    font-weight: 600;
+    line-height: 120%;
   }
 
   img {
@@ -149,5 +168,22 @@
   .number-input::-webkit-inner-spin-button,
   .number-input::-webkit-outer-spin-button {
     -webkit-appearance: none;
+  }
+
+  .advise-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .advise-container p {
+    max-inline-size: 36.375rem;
+  }
+
+  .box {
+    padding: 1.5rem;
+    background: var(--color-white);
+    border-radius: 1rem;
+    box-shadow: 1rem 2rem 3.5rem rgba(143, 174, 207, 0.25);
   }
 }
