@@ -1,0 +1,153 @@
+/* CUSTOM FONT SIZE */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-grey-500: #5e6e85;
+  --color-grey-300: #acc1de;
+  --color-grey-300: #acc1de;
+  --color-blue-900: #253347;
+  --color-blue-500: #345ff6;
+  --color-blue-300: #b3d3f1;
+  --color-blue-100: #e1e7fe;
+
+  /* Font Size */
+  --text-fs1: 4rem;
+  --text-fs2: 3rem;
+  --text-fs3: 2rem;
+  --text-fs4: 1.5rem;
+  --text-fs5: 1.25rem;
+  --text-fs6: 1rem;
+  --text-fs7: 0.875rem;
+
+  /* Custom media query */
+  --breakpoint-lg: 75rem;
+}
+
+@layer base {
+  :root {
+    /* Transition */
+    --transition: all 0.3s ease;
+  }
+
+  body {
+    font-family: "Inter";
+    -webkit-font-smoothing: antialiased;
+    inline-size: 100%;
+    block-size: 100vh;
+  }
+
+  p {
+    color: var(--color-gray-500);
+    line-height: 150%;
+    font-size: var(--text-fs6);
+  }
+
+  h1,
+  h2 {
+    line-height: 110%;
+    letter-spacing: -5%;
+    color: var(--color-blue-900);
+  }
+
+  h1 {
+    font-size: var(--text-fs2);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: var(--text-fs3);
+    font-weight: 600;
+  }
+
+  img {
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@layer components {
+  .wrapper {
+    inline-size: 100%;
+    padding: 2rem 1.5rem;
+    margin-inline: auto;
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* max-inline-size: 1160px; */
+  }
+
+  .bmi-container {
+    background: var(--color-white);
+    border-radius: 1rem;
+    box-shadow: 1rem 2rem 3.5rem rgba(143, 174, 207, 0.25);
+    padding: 1.5rem;
+    /* max-inline-size: 36.25rem; */
+  }
+
+  .radio-change {
+    appearance: none;
+    inline-size: 31px;
+    block-size: 31px;
+    border: 1px solid var(--color-gray-500);
+    border-radius: 100vmax;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .radio-change:hover {
+    border-color: var(--color-blue-500);
+  }
+
+  .radio-change:checked {
+    border: var(--color-blue-100);
+    background: var(--color-blue-100);
+  }
+
+  .radio-change:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--color-blue-500);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .number-input {
+    inline-size: 100%;
+    border: 1px solid var(--color-grey-500);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: var(--color-blue-900);
+    font-size: var(--text-fs4);
+    line-height: 120%;
+    letter-spacing: -5%;
+    appearance: textfield;
+    outline: none;
+  }
+
+  .number-input:is(:hover, :focus-within) {
+    border-color: var(--color-blue-500);
+  }
+
+  .number-input::-webkit-inner-spin-button,
+  .number-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
