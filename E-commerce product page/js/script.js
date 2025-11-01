@@ -149,22 +149,47 @@ const lightBoxThumbImgs = document.querySelectorAll(
   "#lightbox-thumb-img li img"
 );
 
-/* Display the lightbox when clicked */
-slide.addEventListener("click", () => (lightboxEl.style.display = "grid"));
+function enableLightbox() {
+  slide.addEventListener("click", openLightbox);
+  lightboxPrev.addEventListener("click", prevImage);
+  lightboxNext.addEventListener("click", nextImage);
+  closeLightbox.addEventListener("click", closeLightboxFn);
+  changeImage(lightBoxThumbImgs, lightboxImgs);
+}
 
-/* Show the Previous and Next Images  */
-lightboxPrev.addEventListener("click", () =>
-  showSlide(lightboxImgs, current - 1)
-);
-lightboxNext.addEventListener("click", () =>
-  showSlide(lightboxImgs, current + 1)
-);
+function disableLightbox() {
+  slide.removeEventListener("click", openLightbox);
+  lightboxPrev.removeEventListener("click", prevImage);
+  lightboxNext.removeEventListener("click", nextImage);
+  closeLightbox.removeEventListener("click", closeLightboxFn);
+}
 
-/* Close lightbox */
-closeLightbox.addEventListener(
-  "click",
-  () => (lightboxEl.style.display = "none")
-);
+/* Individual handler functions */
+function openLightbox() {
+  lightboxEl.style.display = "grid";
+}
 
-/* MAKE THE LIGHTBOX THUMBNAIL IMGS WORK */
-changeImage(lightBoxThumbImgs, lightboxImgs);
+function closeLightboxFn() {
+  lightboxEl.style.display = "none";
+}
+
+function prevImage() {
+  showSlide(lightboxImgs, current - 1);
+}
+
+function nextImage() {
+  showSlide(lightboxImgs, current + 1);
+}
+
+/* Main responsive setup */
+function handleResize() {
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    enableLightbox();
+  } else {
+    disableLightbox();
+  }
+}
+
+/* Run once and also when window resizes */
+handleResize();
+window.addEventListener("resize", handleResize);
