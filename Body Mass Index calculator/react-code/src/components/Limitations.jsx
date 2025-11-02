@@ -6,8 +6,8 @@ import raceIcon from "../assets/images/icon-race.svg";
 
 const Limitations = () => {
   return (
-    <section className="wrapper grid grid-cols-1 gap-14 md:px-10.5 lg:grid-cols-2">
-      <div className="text-center lg:text-left">
+    <section className="wrapper lg:mt-24 space-y-14 md:px-10.5 relative">
+      <div className="text-center lg:text-left lg:max-w-141">
         <h2 className="mb-8">Limitations of BMI</h2>
         <p>
           Although BMI is often a practical indicator of healthy weight, it is
@@ -17,8 +17,8 @@ const Limitations = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 mx-auto lg:grid-cols-4">
-        <div className="box space-y-4 md:max-w-85">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 items-center mx-auto lg:grid-cols-10 lg:absolute top-0 right-0 pb-20 lg:ml-50 xl:left-10">
+        <div className="box space-y-4 lg:col-start-6 lg:col-end-9">
           <h4 className="flex items-center gap-4">
             <img src={genderIcon} alt="" />
             Gender
@@ -30,7 +30,7 @@ const Limitations = () => {
           </p>
         </div>
 
-        <div className="box space-y-4 md:max-w-85">
+        <div className="box space-y-4 lg:col-start-3 lg:col-end-6">
           <h4 className="flex items-center gap-4">
             <img src={ageIcon} alt="" />
             Age
@@ -41,7 +41,7 @@ const Limitations = () => {
           </p>
         </div>
 
-        <div className="box space-y-4 md:max-w-85">
+        <div className="box space-y-4 lg:col-start-7 lg:col-end-10">
           <h4 className="flex items-center gap-4">
             <img src={muscleIcon} alt="" />
             Muscle
@@ -52,7 +52,7 @@ const Limitations = () => {
           </p>
         </div>
 
-        <div className="box space-y-4 md:max-w-85">
+        <div className="box space-y-4  lg:col-start-1 lg:col-end-4">
           <h4 className="flex items-center gap-4">
             <img src={pregnancyIcon} alt="" />
             Pregnancy
@@ -64,7 +64,7 @@ const Limitations = () => {
           </p>
         </div>
 
-        <div className="box space-y-4 md:col-span-2 md:max-w-85 justify-self-center">
+        <div className="box space-y-4 md:justify-self-center lg:col-start-5 lg:col-end-8">
           <h4 className="flex items-center gap-4">
             <img src={raceIcon} alt="" />
             Race

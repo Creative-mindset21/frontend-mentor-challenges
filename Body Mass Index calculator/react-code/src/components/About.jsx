@@ -2,9 +2,9 @@ import aboutImg from "../assets/images/image-man-eating.webp";
 
 const About = () => {
   return (
-    <section className="flex flex-col gap-12 md:flex-row md:items-center wrapper md:pl-0  lg:gap-32.5">
+    <section className="flex flex-col gap-12 md:flex-row md:items-center wrapper md:pl-0 lg:gap-32.5">
       <div className="basis-[50%]">
-        <img src={aboutImg} alt="" className="" />
+        <img src={aboutImg} alt="A man holding sushi with chopsticks" />
       </div>
 
       <div className="space-y-8 basis-[50%] lg:pt-30">
