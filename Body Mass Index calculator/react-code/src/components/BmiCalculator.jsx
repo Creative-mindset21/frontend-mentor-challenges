@@ -1,6 +1,8 @@
-import React from "react";
+import { useState } from "react";
 
 const BmiCalculator = () => {
+  const [selectedOption, setSelectedOption] = useState("metric");
+
   return (
     <div className="bmi-container space-y-6 lg:p-8 lg:max-w-120 basis-[50%]">
       <p className="text-fs4 leading-[120%] tracking-[-5%] font-medium text-blue-900">
@@ -13,7 +15,10 @@ const BmiCalculator = () => {
             type="radio"
             name="conversion"
             id="metric"
+            value="metric"
             className="radio-change"
+            checked={selectedOption === "metric"}
+            onChange={(e) => setSelectedOption(e.target.value)}
           />
           <label htmlFor="metric">Metric </label>
         </div>
@@ -23,50 +28,119 @@ const BmiCalculator = () => {
             type="radio"
             name="conversion"
             id="imperial"
+            value="imperial"
             className="radio-change"
+            checked={selectedOption === "imperial"}
+            onChange={(e) => setSelectedOption(e.target.value)}
           />
           <label htmlFor="imperial">Imperial</label>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:gap-6 text-left space-y-4">
-        <div className="relative space-y-2">
-          <label
-            htmlFor="height"
-            className="inline-block text-gray-500 text-fs7 leading-[150%]"
-          >
-            Height
-          </label>
+      {selectedOption === "metric" ? (
+        <div className="flex flex-col md:flex-row md:gap-6 text-left space-y-4">
+          <div className="relative space-y-2">
+            <label
+              htmlFor="height"
+              className="inline-block text-gray-500 text-fs7 leading-[150%]"
+            >
+              Height
+            </label>
 
-          <input
-            type="number"
-            name="height"
-            id="height"
-            className="number-input lg:py-4"
-          />
-          <span className="absolute right-[10%] top-[45%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
-            cm
-          </span>
-        </div>
+            <input
+              type="number"
+              name="height"
+              id="height"
+              className="number-input lg:py-4"
+            />
+            <span className="absolute right-[10%] top-[45%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
+              cm
+            </span>
+          </div>
 
-        <div className="relative space-y-2">
-          <label
-            htmlFor="weight"
-            className="inline-block text-gray-500 text-fs7 leading-[150%]"
-          >
-            Weight
-          </label>
-          <input
-            type="number"
-            name="weight"
-            id="weight"
-            className="number-input lg:py-4"
-          />
-          <span className="absolute right-[10%] top-[45%] lg:top-[40%] text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
-            kg
-          </span>
+          <div className="relative space-y-2">
+            <label
+              htmlFor="weight"
+              className="inline-block text-gray-500 text-fs7 leading-[150%]"
+            >
+              Weight
+            </label>
+            <input
+              type="number"
+              name="weight"
+              id="weight"
+              className="number-input lg:py-4"
+            />
+            <span className="absolute right-[10%] top-[45%] lg:top-[40%] text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
+              kg
+            </span>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="flex flex-col md:gap-6 text-left space-y-4">
+          <div className="relative space-y-2">
+            <label
+              htmlFor="height"
+              className="inline-block text-gray-500 text-fs7 leading-[150%]"
+            >
+              Height
+            </label>
+
+            <div className="flex gap-4 relative">
+              <input
+                type="number"
+                name="height"
+                id="height"
+                className="number-input lg:py-4"
+              />
+              <span className="absolute left-[35%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
+                ft
+              </span>
+
+              <input
+                type="number"
+                name="height"
+                id="height"
+                className="number-input lg:py-4"
+              />
+              <span className="absolute right-[6%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
+                cm
+              </span>
+            </div>
+          </div>
+
+          <div className="relative space-y-2">
+            <label
+              htmlFor="weight"
+              className="inline-block text-gray-500 text-fs7 leading-[150%]"
+            >
+              Weight
+            </label>
+
+            <div className="flex gap-4 relative">
+              <input
+                type="number"
+                name="height"
+                id="height"
+                className="number-input lg:py-4"
+              />
+              <span className="absolute left-[35%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
+                st
+              </span>
+
+              <input
+                type="number"
+                name="height"
+                id="height"
+                className="number-input lg:py-4"
+              />
+              <span className="absolute right-[6%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
+                lbs
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="bg-blue-500  rounded-2xl p-8 text-left flex flex-col gap-6 md:flex-row md:items-center justify-between md:rounded-r-full md:rounded-l-2xl">
         <div className="basis[55%] lg:basis-[30%] ">
