@@ -2,9 +2,44 @@ import { useState } from "react";
 
 const BmiCalculator = () => {
   const [selectedOption, setSelectedOption] = useState("metric");
+  const [heightValue, setHeightValue] = useState("");
+  const [weightValue, setWeightValue] = useState("");
+  const [ftValue, setFtValue] = useState("");
+  const [inValue, setInValue] = useState("");
+  const [stValue, setStValue] = useState("");
+  const [lbsValue, setLbsValue] = useState("");
+
+  const bmiConvertor = () => {
+    let bmi = 0;
+
+    if (selectedOption === "metric") {
+      const heightInMetres = Number(heightValue) / 100;
+      const weightInKg = Number(weightValue);
+
+      if (heightInMetres > 0 && weightInKg > 0) {
+        bmi = weightInKg / (heightInMetres * heightInMetres);
+      }
+    } else {
+      const heightInInches = Number(ftValue) * 12 + Number(inValue);
+      const weightInLbs = Number(stValue) * 12 + Number(lbsValue);
+
+      if (heightInInches > 0 && weightInLbs > 0) {
+        bmi = (weightInLbs * 703) / (heightInInches * heightInInches);
+      }
+    }
+
+    return bmi ? bmi.toFixed(1) : null;
+  };
+
+  const isMetricComplete =
+    selectedOption === "metric" && heightValue && weightValue;
+  const isImperialComplete =
+    selectedOption === "imperial" && ftValue && inValue && stValue && lbsValue;
+
+  const showResult = isMetricComplete || isImperialComplete;
 
   return (
-    <div className="bmi-container space-y-6 lg:p-8 lg:max-w-120 basis-[50%]">
+    <div className="w-full bmi-container space-y-6 lg:p-8 lg:max-w-120">
       <p className="text-fs4 leading-[120%] tracking-[-5%] font-medium text-blue-900">
         Enter your details below
       </p>
@@ -51,7 +86,9 @@ const BmiCalculator = () => {
               type="number"
               name="height"
               id="height"
+              value={heightValue}
               className="number-input lg:py-4"
+              onChange={(e) => setHeightValue(e.target.value)}
             />
             <span className="absolute right-[10%] top-[45%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
               cm
@@ -69,7 +106,9 @@ const BmiCalculator = () => {
               type="number"
               name="weight"
               id="weight"
+              value={weightValue}
               className="number-input lg:py-4"
+              onChange={(e) => setWeightValue(e.target.value)}
             />
             <span className="absolute right-[10%] top-[45%] lg:top-[40%] text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
               kg
@@ -92,6 +131,8 @@ const BmiCalculator = () => {
                 name="height"
                 id="height"
                 className="number-input lg:py-4"
+                value={ftValue}
+                onChange={(e) => setFtValue(e.target.value)}
               />
               <span className="absolute left-[35%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
                 ft
@@ -102,9 +143,11 @@ const BmiCalculator = () => {
                 name="height"
                 id="height"
                 className="number-input lg:py-4"
+                value={inValue}
+                onChange={(e) => setInValue(e.target.value)}
               />
               <span className="absolute right-[6%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
-                cm
+                in
               </span>
             </div>
           </div>
@@ -123,6 +166,8 @@ const BmiCalculator = () => {
                 name="height"
                 id="height"
                 className="number-input lg:py-4"
+                value={stValue}
+                onChange={(e) => setStValue(e.target.value)}
               />
               <span className="absolute left-[35%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
                 st
@@ -133,6 +178,8 @@ const BmiCalculator = () => {
                 name="height"
                 id="height"
                 className="number-input lg:py-4"
+                value={lbsValue}
+                onChange={(e) => setLbsValue(e.target.value)}
               />
               <span className="absolute right-[6%] top-[50%] -translate-y-[50%]  text-blue-500 text-fs4 leading-[120%] -tracking-[5%] font-medium">
                 lbs
@@ -142,22 +189,31 @@ const BmiCalculator = () => {
         </div>
       )}
 
-      <div className="bg-blue-500  rounded-2xl p-8 text-left flex flex-col gap-6 md:flex-row md:items-center justify-between md:rounded-r-full md:rounded-l-2xl">
-        <div className="basis[55%] lg:basis-[30%] ">
-          <p className="text-fs6 leading-[150%] font-semibold text-white">
-            Your BMI is...
-          </p>
-
-          <p className="text-fs2 leading-[110%] -tracking-[5%] font-medium lg:text-fs1 text-white">
-            23.4
+      {!showResult ? (
+        <div className="bg-blue-500 rounded-2xl p-8 text-left md:rounded-r-full md:rounded-l-2xl">
+          <h3 className="text-white">Welcome</h3>
+          <p className="text-white text-fs7">
+            Enter your height and weight and you’ll see your BMI result here
           </p>
         </div>
+      ) : (
+        <div className="bg-blue-500  rounded-2xl p-8 text-left flex flex-col gap-6 md:flex-row md:items-center justify-between md:rounded-r-full md:rounded-l-2xl">
+          <div className="basis[55%] lg:basis-[40%] ">
+            <p className="text-fs6 leading-[150%] font-semibold text-white">
+              Your BMI is...
+            </p>
 
-        <p className="basis-[45%] lg:basis-[70%] text-fs7 text-white">
-          Your BMI suggests you're healthy weight. Your ideal weight is between{" "}
-          <span className="font-bold">63.3kgs - 85.2kgs.</span>
-        </p>
-      </div>
+            <p className="text-fs2 leading-[110%] -tracking-[5%] font-medium lg:text-fs1 text-white">
+              {bmiConvertor()}
+            </p>
+          </div>
+
+          <p className="basis-[45%] lg:basis-[60%] text-fs7 text-white">
+            Your BMI suggests you're healthy weight. Your ideal weight is
+            between <span className="font-bold">63.3kgs - 85.2kgs.</span>
+          </p>
+        </div>
+      )}
     </div>
   );
 };

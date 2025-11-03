@@ -4,9 +4,9 @@ import BmiCalculator from "./BmiCalculator";
 const Hero = () => {
   return (
     <section className="mb-8 lg:mb-12 wrapper pt-0">
-      <div className="hero gap-8 lg:flex-row items-center">
-        <div className="basis-[50%]">
-          <h1 className="lg:text-left lg:text-fs1 font-bold lg:mb-8">
+      <div className="hero gap-8 grid grid-cols-1 lg:grid-cols-2">
+        <div>
+          <h1 className="lg:text-left lg:text-fs1 font-bold lg:mb-8 lg:mt-24">
             Body Mass <br />
             Index Calculator
           </h1>

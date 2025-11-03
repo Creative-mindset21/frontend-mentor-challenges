@@ -103,8 +103,8 @@
 
   .hero {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* max-inline-size: 1160px; */
   }
 
