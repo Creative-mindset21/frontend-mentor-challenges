@@ -3,11 +3,12 @@ import ageIcon from "../assets/images/icon-age.svg";
 import muscleIcon from "../assets/images/icon-muscle.svg";
 import pregnancyIcon from "../assets/images/icon-pregnancy.svg";
 import raceIcon from "../assets/images/icon-race.svg";
+import arrowleft from "../assets/images/pattern-curved-line-right.svg";
 
 const Limitations = () => {
   return (
     <section className="wrapper lg:mt-24 space-y-14 md:px-10.5 relative">
-      <div className="text-center lg:text-left lg:max-w-141">
+      <div className="text-center lg:text-left lg:max-w-141 relative">
         <h2 className="mb-8">Limitations of BMI</h2>
         <p>
           Although BMI is often a practical indicator of healthy weight, it is
@@ -15,6 +16,7 @@ const Limitations = () => {
           their BMI outcomes, and in certain cases, the measurement may not be
           beneficial to use.
         </p>
+        <img src={arrowleft} alt="" className="absolute top-50 right-90" />
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 items-center mx-auto lg:grid-cols-10 lg:absolute top-0 right-0 pb-20 lg:ml-50 xl:left-10">

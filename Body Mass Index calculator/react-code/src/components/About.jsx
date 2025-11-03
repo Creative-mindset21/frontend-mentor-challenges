@@ -1,8 +1,14 @@
 import aboutImg from "../assets/images/image-man-eating.webp";
+import arrowRight from "../assets/images/pattern-curved-line-left.svg";
 
 const About = () => {
   return (
-    <section className="flex flex-col gap-12 md:flex-row md:items-center wrapper md:pl-0 lg:gap-32.5">
+    <section className="flex flex-col gap-12 md:flex-row md:items-center wrapper md:pl-0 lg:gap-32.5 relative lg:mb-24">
+      <img
+        src={arrowRight}
+        alt=""
+        className="hidden lg:block absolute right-[25%] lg:top-5"
+      />
       <div className="basis-[50%]">
         <img src={aboutImg} alt="A man holding sushi with chopsticks" />
       </div>

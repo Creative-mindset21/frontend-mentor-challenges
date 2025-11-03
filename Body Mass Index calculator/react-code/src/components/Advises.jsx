@@ -5,7 +5,7 @@ import sleepIcon from "../assets/images/icon-sleep.svg";
 
 const Advises = () => {
   return (
-    <section className="wrapper py-12 px-6 bg-linear-to-b from-[hsl(183,95%,98%)] to-[hsl(216,95%,98%)] advise-container lg:grid-cols-3 max-w-[90%] rounded-[2.1875rem]">
+    <section className="wrapper py-12 px-6 bg-linear-to-b from-[hsl(183,95%,98%)] to-[hsl(216,95%,98%)] advise-container lg:grid-cols-3 max-w-[90%] rounded-[2.1875rem] lg:mb-24">
       <div className="flex flex-col md:flex-row md:items-center gap-10 lg:flex-col lg:items-start">
         <img src={eatingIcon} alt="" className="w-16 h-16" />
         <div>
