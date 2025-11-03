@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Creative-mindset21/frontend-mentor-challenges/tree/main/Body%20Mass%20Index%20calculator)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/Creative-mindset21/frontend-mentor-challenges/tree/main/Body%20Mass%20Index%20calculator)
+- Live Site URL: [Live site URL](https://bmi-calculator-21.vercel.app/)
 
 ## My process
 
